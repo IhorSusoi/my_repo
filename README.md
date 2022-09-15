@@ -1,1 +1,1 @@
-# my_repo
+https://IhorSusoi.github.io/rsschool-cv/
