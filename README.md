@@ -1,1 +1,1 @@
-https://IhorSusoi.github.io/my_repo/
+https://IhorSusoi.github.io/main/
