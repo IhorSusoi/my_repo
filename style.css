@@ -3,6 +3,7 @@ body {
 }
 
 .empty_yet {
-    font-size: 1000%;
+    font-size: 3rem;
     text-align: center;
+    color:brown;
 }
