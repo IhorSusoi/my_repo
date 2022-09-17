@@ -7,3 +7,28 @@ body {
     text-align: center;
     color:brown;
 }
+
+
+.parent_block{ 
+    
+    background-color: aquamarine; 
+    border: 3px solid chocolate; 
+    box-shadow: 0px 0px 10px red; 
+    border-radius: 10px; 
+    padding: 20px; 
+    width: fit-content; 
+    margin: auto; 
+    margin-top: 80px;
+} 
+
+.block { 
+    
+    background-color: aqua; 
+    color: black; 
+    border: 3px solid chocolate; 
+    border-radius: 10px; 
+    width: 250px; 
+    padding: 2px 10px; 
+    text-align: center; 
+    margin: 20px; 
+}
