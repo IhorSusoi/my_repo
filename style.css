@@ -1,34 +1,110 @@
 body {
-    background-color: blanchedalmond;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 1000px;
 }
 
-.empty_yet {
-    font-size: 3rem;
-    text-align: center;
-    color:brown;
+@media screen and (max-width: 900px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: 300px;
+    }
+
+    .left-side {
+        background-color: #fffd7e;
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: 300px;
+    }
+  }
+
+.left-side {
+    background-color: #fffd7e;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
 }
 
-
-.parent_block{ 
-    
-    background-color: aquamarine; 
-    border: 3px solid chocolate; 
-    box-shadow: 0px 0px 10px red; 
-    border-radius: 10px; 
-    padding: 20px; 
-    width: fit-content; 
-    margin: auto; 
-    margin-top: 80px;
+.left-side .avatar {
+    width: 100%;
 } 
 
-.block { 
-    
-    background-color: aqua; 
-    color: black; 
-    border: 3px solid chocolate; 
-    border-radius: 10px; 
-    width: 250px; 
-    padding: 2px 10px; 
-    text-align: center; 
-    margin: 20px; 
+.left-side .education {
+    margin-left: 10%;
+}
+
+.left-side .education h1 {
+    text-transform: uppercase;
+}
+
+.underscore {
+    background-color: red;
+    height: 2px;
+}
+
+.left-side .education .university {
+    margin-left: 10%;
+    font-size: 1.1em;
+    text-transform: capitalize;
+}
+
+.left-side .education .specialization {
+    margin-left: 12%;
+    font-size: 1em;
+    text-transform: capitalize;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: row;
+}
+
+.contacts .yellow_box {
+    flex: 2;
+    background-color: #fecb00;
+}
+
+.contacts .contact_name {
+    flex: 10;
+    background-color: #292a2f;
+    color: white;
+}
+
+.contacts .contact_name p {
+    margin: 2px 20px;
+}
+
+.contact {
+    margin: 2px 20%;
+}
+
+
+
+.right-side {
+    background-color: rgb(195, 255, 195);
+    flex: 4;
+}
+
+header {
+    margin: 10% 0;
+    background-color: rgb(92, 255, 114);
+}
+
+header p {
+    text-transform: uppercase;
+    font-size: 3em;
+    padding: 10% 20%;
 }
