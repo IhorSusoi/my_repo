@@ -43,7 +43,7 @@ pre code {
         display: flex;
         flex-direction: column-reverse;
         margin: auto;
-        width: 300px;
+        min-width: 300px;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
 
     }
