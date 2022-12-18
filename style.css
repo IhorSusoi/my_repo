@@ -10,6 +10,14 @@ a {
     text-decoration: none;
 }
 
+.right-block a {
+    color: #202126;
+}
+
+.left-side a {
+    color: #ffffff;
+}
+
 pre code {
     background-color: #eee;
     border: 1px solid #999;
@@ -24,9 +32,15 @@ pre code {
         display: flex;
         flex-direction: column-reverse;
         margin: auto;
-        width: 300px;
+        width: 340px;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
 
+    .rsschool-logo {
+        width: 100%;
+        position: sticky;
+        bottom: 0;
+        margin: 20px 0;
     }
 
     .left-side {
@@ -43,9 +57,14 @@ pre code {
         display: flex;
         flex-direction: column-reverse;
         margin: auto;
-        min-width: 300px;
+        min-width: 340px;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
-
+    }
+    .rsschool-logo {
+        width: 100%;
+        position: sticky;
+        bottom: 0;
+        margin: 20px 0;
     }
   }
 
@@ -84,6 +103,15 @@ pre code {
     margin-left: 12%;
     font-size: 1em;
     text-transform: capitalize;
+}
+
+.rsschool-logo {
+    margin:230px 0 0 0;
+    padding: 0;
+}
+
+.rsschool-logo img{
+    width: 100%;
 }
 
 .contacts {
