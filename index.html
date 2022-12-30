@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="HTML, CSS, ihorsus">
     <meta name="description" content="Ihor Susoi`s CV">
@@ -22,39 +22,85 @@
         <p class="university">Ternopil NTU named after Ivan Pulyuy - <strong>2012-15</strong></p>
         <p class="specialization">computer automation - <strong>Bachelor</strong></p>
         </div>
+
         <div>
-        <div class="contacts">
-            <div class="yellow_box"></div>
-            <div class="contact_name"><p>Phone</p></div>
+            <div class="contacts">
+                <div class="yellow_box"></div>
+                <div class="contact_name"><p>Phone</p></div>
+            </div>
+            <p class="contact">+38 050 714 82 60</p>
         </div>
-        <p class="contact">+38 050 714 82 60</p>
-        </div>
+
         <div>
             <div class="contacts">
                 <div class="yellow_box"></div>
                 <div class="contact_name"><p>Discord</p></div>
             </div>
             <p class="contact">Ihor Susoi (@IhorSusoi)</p>
+        </div>
+
+        <div>
+            <div class="contacts">
+                <div class="yellow_box"></div>
+                <div class="contact_name"><p>e-mail</p></div>
             </div>
-            <div>
-        <div class="contacts">
-            <div class="yellow_box"></div>
-            <div class="contact_name"><p>e-mail</p></div>
+            <p class="contact"><a href="mailto:ihor.susoi@gmail.com" title="Send me e-mail">ihor.susoi@gmail.com</a></p>
         </div>
-        <p class="contact">ihor.susoi@gmail.com</p>
-        </div>
+
         <div>
             <div class="contacts">
                 <div class="yellow_box"></div>
                 <div class="contact_name"><p>github</p></div>
             </div>
-            <p class="contact">https://github.com/IhorSusoi</p>
-            </div>
+            <p class="contact"><a href="https://github.com/IhorSusoi" title="Go to my GitHub">https://github.com/IhorSusoi</a></p>
+        </div>
+
+        <a class="rsschool-logo" href="https://rs.school/js-stage0/" title="Go to rsschool"><img src="rsschool_logo.jpg" alt="rsschool-logo"></a>
     </div>
     <div class="right-side">
         <header>
-            <p><strong>ihor</strong> susoi</p>
+            <p class="p1"><strong>ihor</strong> susoi</p>
+            <p class="p2">front-end trainee</p>
         </header>
+        <div class="right-block">
+            <h1>About me</h1>
+            <div class="underscore"></div>
+            <p> I want to study JavaScript, HTML, CSS, want to work for my future. 
+                I have no work experience, but I have a real thirst for learning and learning new things
+                 for myself. I want to improve the world, and for peace in the world! 
+                <strong>And first of all peace in Ukraine!</strong></p>
+        </div>
+        <div class="right-block">
+            <h1>examples of code from <a href="https://www.codewars.com/users/rsschool_2b264b47a74cd9c9"
+                title="Go to Codewars profile">Codewars</a></h1>
+            <div class="underscore"></div>
+            <p><a href="https://www.codewars.com/kata/522551eee9abb932420004a0"
+                title="Go to Fibonacci task"><strong>n-th Fibonacci</strong></a></p>
+            <pre>
+                <code>
+function nthFibo(n) {
+    let a = 1;
+    let b = 1;
+    let c = a + b;
+    let j_it = 4;
+    if(n == 1) return 0;
+    if(n == 2 || n == 3) return 1;
+    for (let i = 4; i &lt; n; i++ ){
+      a = b;
+      b = c;
+      c = a + b;
+      if(i == c) j_it++;
+    }
+    return c;
+}
+                </code>
+            </pre>
+        </div>
+        <div class="right-block">
+            <h1>english and other skills</h1>
+            <div class="underscore"></div>
+            <p>My english level is A2 by <a href="https://learnenglish.britishcouncil.org/level-test-b1">British Council</a></p>
+        </div>
     </div>
 </body>
 </html>

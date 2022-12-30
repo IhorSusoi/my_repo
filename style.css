@@ -3,18 +3,48 @@ body {
     flex-direction: row;
     margin: auto;
     width: 1000px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-@media screen and (max-width: 900px) {
+a {
+    text-decoration: none;
+}
+
+.right-block a {
+    color: #202126;
+}
+
+.left-side a {
+    color: #ffffff;
+}
+
+pre code {
+    background-color: #eee;
+    border: 1px solid #999;
+    display: block;
+    padding: 20px;
+    margin-left: 10%;
+    min-width: fit-content;
+  }
+
+@media screen and (max-width: 1017px) {
     body {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         margin: auto;
-        width: 300px;
+        width: 340px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .rsschool-logo {
+        width: 100%;
+        position: sticky;
+        bottom: 0;
+        margin: 20px 0;
     }
 
     .left-side {
-        background-color: #fffd7e;
+        background-color: #202126;
         flex: 2;
         display: flex;
         flex-direction: column;
@@ -25,17 +55,25 @@ body {
   @media screen and (max-width: 500px) {
     body {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         margin: auto;
-        width: 300px;
+        min-width: 340px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .rsschool-logo {
+        width: 100%;
+        position: sticky;
+        bottom: 0;
+        margin: 20px 0;
     }
   }
 
 .left-side {
-    background-color: #fffd7e;
+    background-color: #212026;
     flex: 2;
     display: flex;
     flex-direction: column;
+    color: #ffffff;
 }
 
 .left-side .avatar {
@@ -50,8 +88,8 @@ body {
     text-transform: uppercase;
 }
 
-.underscore {
-    background-color: red;
+.left-side .underscore {
+    background-color: #ffd401;
     height: 2px;
 }
 
@@ -67,6 +105,15 @@ body {
     text-transform: capitalize;
 }
 
+.rsschool-logo {
+    margin:230px 0 0 0;
+    padding: 0;
+}
+
+.rsschool-logo img{
+    width: 100%;
+}
+
 .contacts {
     display: flex;
     flex-direction: row;
@@ -74,7 +121,7 @@ body {
 
 .contacts .yellow_box {
     flex: 2;
-    background-color: #fecb00;
+    background-color: #ffd401;
 }
 
 .contacts .contact_name {
@@ -94,17 +141,41 @@ body {
 
 
 .right-side {
-    background-color: rgb(195, 255, 195);
+    background-color: #ffffff;
     flex: 4;
+    color: #2d2d2d;
 }
 
 header {
     margin: 10% 0;
-    background-color: rgb(92, 255, 114);
+    background-color: #ffd401;
 }
 
-header p {
+header .p1 {
     text-transform: uppercase;
     font-size: 3em;
-    padding: 10% 20%;
+    padding: 10% 20% 0;
+    margin-bottom: 0;
+}
+
+header .p2 {
+    text-transform: uppercase;
+    font-size: 1.5em;
+    padding: 0 20% 5%;
+    margin-top: 0;
+}
+
+.right-side .right-block h1 {
+    margin-left: 10%;
+    text-transform: uppercase;
+}
+
+.right-side .right-block .underscore {
+    height: 2px;
+    background-color: #2d2d2d;
+    margin-left: 10%;
+}
+
+.right-side .right-block p {
+    margin: 3% 8% 3% 15%;
 }
