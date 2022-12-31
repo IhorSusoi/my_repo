@@ -78,7 +78,7 @@ header .navbar {
 }
 
 .welcome_text h1 {
-    font-family: 'Inika', serif;
+    font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 45px;
@@ -89,7 +89,7 @@ header .navbar {
 }
 
 .welcome_text p {
-    font-family: 'Inika', serif;
+    font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -108,7 +108,7 @@ header .navbar {
     border-radius: 10px;
     color: #000000;
     text-transform: uppercase;
-    font-family: 'Inika', serif;
+    font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -151,7 +151,7 @@ header .navbar {
 }
 
 .about .about_text p {
-    font-family: 'Inika', serif;
+    font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -260,7 +260,7 @@ header .navbar {
     display: flex;
     width: 120px;
     height: 24px;
-    font-family: 'Inika', serif;
+    font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
@@ -274,7 +274,7 @@ header .navbar {
     margin: 10px 31px 0;
     width: 267.19px;
     height: 20px;
-    font-family: 'Inika', serif;
+    font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -315,7 +315,7 @@ header .navbar {
     width: 135px;
     height: 49px;
     margin: 0;
-    font-family: 'Inika', serif;
+    font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
@@ -345,7 +345,7 @@ header .navbar {
     height: 50px;
     background: #EDF2EC;
     border-radius: 20px;
-    font-family: 'Inika', serif;
+    font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
@@ -376,7 +376,7 @@ header .navbar {
     width: 452px;
     height: 103px;
     margin: 0;
-    font-family: 'Inika', serif;
+    font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
@@ -392,7 +392,7 @@ header .navbar {
     border-radius: 5px;
     font-family: 'Inika', serif;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 700;
     font-size: 20px;
     line-height: 26px;
     color: #E06733;
@@ -437,7 +437,7 @@ header .navbar {
     justify-content: space-between;
     box-sizing: border-box;
     padding: 5px 35px 5px 20px;
-    font-family: 'Inika', serif;
+    font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -464,7 +464,7 @@ footer {
     margin: auto;
     box-sizing: border-box;
     padding: 40px 109px;
-    font-family: 'Inika', serif;
+    font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
