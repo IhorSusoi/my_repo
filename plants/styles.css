@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 .w1440px {
-=======
-body {
->>>>>>> eebffd835704ae7111e32feddb87de77699df514
     width: 1440px;
     margin: auto;
 }
@@ -17,13 +13,6 @@ header {
     background-color: #EDF2EC;
 }
 
-<<<<<<< HEAD
-=======
-main {
-    background-color: #EDF2EC;;
-}
-
->>>>>>> eebffd835704ae7111e32feddb87de77699df514
 .navbar {
     position: relative;
     width: 1220px;
@@ -67,7 +56,6 @@ header .navbar {
     color: #000000;
 }
 
-<<<<<<< HEAD
 .welcome {
     width: 1440px;
     margin: auto;
@@ -78,8 +66,6 @@ header .navbar {
     background-color: #EDF2EC;
 }
 
-=======
->>>>>>> eebffd835704ae7111e32feddb87de77699df514
 .leafs {
     position: relative;
     width: 448.8px;
@@ -91,16 +77,6 @@ header .navbar {
     margin-top: 36px;
 }
 
-<<<<<<< HEAD
-=======
-.welcome {
-    display: flex;
-    height: 532px;
-    padding: 62px 109px;
-    box-sizing: border-box;
-}
-
->>>>>>> eebffd835704ae7111e32feddb87de77699df514
 .welcome_text h1 {
     font-family: 'Inika', serif;
     font-style: normal;
@@ -192,10 +168,7 @@ header .navbar {
 .service {
     background-color: #EDF2EC;
     width: 1440px;
-<<<<<<< HEAD
     margin: auto;
-=======
->>>>>>> eebffd835704ae7111e32feddb87de77699df514
     height: 1300px;
     box-sizing: border-box;
     padding: 40px 109px 121px;
@@ -284,10 +257,7 @@ header .navbar {
 }
 
 .service .services .service_item .rectangle h2 a {
-<<<<<<< HEAD
     display: flex;
-=======
->>>>>>> eebffd835704ae7111e32feddb87de77699df514
     width: 120px;
     height: 24px;
     font-family: 'Inika', serif;
@@ -296,12 +266,8 @@ header .navbar {
     font-size: 20px;
     line-height: 20px;
     color: #E06733;
-<<<<<<< HEAD
     margin: 10px auto 0;
     justify-content: center;
-=======
-    margin: 10px 105px 0;
->>>>>>> eebffd835704ae7111e32feddb87de77699df514
 }
 
 .service .services .service_item .rectangle p {
@@ -314,7 +280,6 @@ header .navbar {
     font-size: 16px;
     line-height: 20px;
     color: #717171;
-<<<<<<< HEAD
 }
 
 .prices {
@@ -523,6 +488,4 @@ footer .social_list {
     padding: 9px 3px;
     display: flex;
     justify-content: space-between;
-=======
->>>>>>> eebffd835704ae7111e32feddb87de77699df514
 }
