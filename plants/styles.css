@@ -1,5 +1,10 @@
+html {
+    margin: -8px;
+}
+
 .w1440px {
     width: 1440px;
+    height: fit-content;
     margin: auto;
 }
 
@@ -9,16 +14,19 @@ a {
 }
 
 header {
-    height: 134px;
     background-color: #EDF2EC;
 }
 
+.header1440px {
+    height: 134px;
+    width: 1440px;
+    box-sizing: border-box;
+    padding: 42px 110px;
+    margin: auto;
+}
+
 .navbar {
-    position: relative;
-    width: 1220px;
-    height: 50px;
-    left: 111px;
-    top: 42px;
+
     display: flex;
 }
 
@@ -31,13 +39,14 @@ header {
 .navbar ul {
     display: flex;
     padding: 0;
+    justify-content: space-between;
+    height: 50px;
 }
 
 .navbar li {
     list-style: none;
-    flex-direction: row;
-    flex-wrap: wrap;
-    flex: auto;
+    display: flex;
+    height: 50px;
 }
 
 header .logo {
@@ -86,6 +95,7 @@ header .navbar {
     color: #717171;
     width: 549px;
     height: 101px;
+    margin: 0;
 }
 
 .welcome_text p {
@@ -97,6 +107,7 @@ header .navbar {
     color: #636060;
     width: 525.44px;
     height: 105px;
+    margin: 42px 0 0 0;
 }
 
 .welcome_text .learn_more {
@@ -104,6 +115,7 @@ header .navbar {
     box-sizing: border-box;
     width: 158px;
     height: 44px;
+    margin-top: 48px;
     border: 2px solid #E06733;
     border-radius: 10px;
     color: #000000;
@@ -159,6 +171,7 @@ header .navbar {
     color: #636060;
     width: 605px;
     height: 208px;
+    margin: 40px 0 0 0;
 }
 
 .about img {
@@ -178,7 +191,6 @@ header .navbar {
     width: 1007px;
     height: 94px;
     display: inline-flex;
-    align-items: center;
 }
 
 .service .services_content h2 {
@@ -200,6 +212,7 @@ header .navbar {
     justify-content: space-between;
     width: 559px;
     height: 50px;
+    margin-top: 29px;
 }
 
 .service .services_content .services_btns .btn {
@@ -398,6 +411,7 @@ header .navbar {
     color: #E06733;
     cursor: pointer;
     margin-top: 38px;
+    background-color: #ffffff;
 }
 
 .prices .prices_wrapper .text_call_us .btn:hover {
