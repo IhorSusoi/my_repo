@@ -1,5 +1,6 @@
 html {
-    margin: -8px;
+    margin: -8px 0;
+    scroll-behavior: smooth;
 }
 
 .w1440px {
@@ -429,7 +430,7 @@ header .navbar {
     display: flex;
 }
 
-.contacts p {
+.contacts h2 {
     margin: 60px 64px 0 113px;
     width: 195px;
     height: 51px;
