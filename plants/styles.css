@@ -1,6 +1,9 @@
 html {
-    margin: -8px 0;
     scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
 }
 
 .w1440px {
@@ -26,8 +29,9 @@ header {
     margin: auto;
 }
 
-.navbar {
 
+
+.navbar {
     display: flex;
 }
 
@@ -128,11 +132,11 @@ header .navbar {
     line-height: 20px;
     cursor: pointer;
     bottom: 0px;
+    transition: 500ms;
 }
 
 .welcome_text .learn_more:hover {
     color: #EDF2EC;
-    transition: 500ms;
     background-color: #E06733;
 }
 
@@ -229,12 +233,12 @@ header .navbar {
     line-height: 26px;
     color: #E06733;
     cursor: pointer;
+    transition: 500ms;
 }
 
 
 .service .services_content .services_btns .btn:hover {
     color: #EDF2EC;
-    transition: 500ms;
     background-color: #E06733;
 }
 
@@ -256,6 +260,10 @@ header .navbar {
 
 .service .services .service_item img {
     border-radius: 20px 20px 0px 0px;
+}
+
+.service .services .service_item img.img768{
+    display: none;
 }
 
 .service .services .service_item .rectangle {
@@ -413,11 +421,11 @@ header .navbar {
     cursor: pointer;
     margin-top: 38px;
     background-color: #ffffff;
+    transition: 500ms;
 }
 
 .prices .prices_wrapper .text_call_us .btn:hover {
     color: #EDF2EC;
-    transition: 500ms;
     background-color: #E06733;
 }
 
@@ -473,6 +481,10 @@ header .navbar {
     margin-top: 12px;
 }
 
+.contacts img.woman {
+    margin-top: 53px;
+}
+
 footer {
     width: 1440px;
     height: 130px;
@@ -503,4 +515,267 @@ footer .social_list {
     padding: 9px 3px;
     display: flex;
     justify-content: space-between;
+}
+
+@media screen and 
+    (max-width: 1439px) and 
+    (min-width: 768px) {
+
+    .w1440px {
+        width: 768px;
+    }
+
+    .header1440px {
+        height: 117px;
+        width: 768px;
+        box-sizing: border-box;
+        padding: 35px 50px;
+        margin: auto;
+    }
+
+    .navbar nav {
+        width: 452px;
+        height: 47px;
+        margin-left: 139px;
+    }
+
+    .welcome {
+        width: 768px;
+        height: 420px;
+        padding: 40px 50px 70px;
+        flex-direction: row-reverse;
+        align-items: flex-end;
+    }
+
+    .leafs {
+            transform: scale(0.625);
+            top: 25px;
+    }
+
+    .welcome_text {
+        width: 346px;
+        height: 310px;
+        margin: 0;
+    }
+
+    .welcome_text h1 {
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 50px;
+        width: 341px;
+        height: 101px;
+    }
+
+    .welcome_text p {
+        width: 341px;
+        height: 105px;
+        margin: 30px 0 0 5px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .welcome_text .learn_more {
+         margin-top: 30px;
+    }
+
+    .about {
+        width: 768px;
+        height: 783px;
+        display: flex;
+        flex-direction: column;
+        padding: 40px 50px 95px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .about .about_text h2 {
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 46px;
+        width: 423px;
+        height: 102px;
+        text-align: center;
+    }
+
+    .about .about_text {
+        display: flex;
+        width: 668px;
+        height: 350px;
+        margin: 0;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .about .about_text p {
+        width: 668px;
+        height: 208px;
+    }
+
+    .about img {
+        margin: 0;
+        width: 250px;
+        height: auto;
+    }
+
+    .service {
+        width: 768px;
+        height: 1780px; 
+        padding: 60px 50px 70px;
+    }
+
+    .service .services_content {
+        width: 668px;
+        height: 184px;
+        flex-direction: column;
+    }
+
+    .service .services_content h2 {
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 46px;
+    }
+
+    .service .services_content .services_btns {
+        width: 559px;
+        height: 50px;
+        margin: 40px 0;
+    }
+
+    .service .services {
+        width: 668px;
+        height: 1426px;
+        margin-top: 40px;
+    }
+
+    .service .services .service_item {
+        width: 281px;
+        height: 450px;
+    }
+
+    .service .services .service_item img.img768 {
+        display: block;
+    }
+
+    .service .services .service_item img.img1440 {
+        display: none;
+    }
+
+    .service .services .service_item .rectangle {
+        width: 280px;
+        height: 100px;
+    }
+
+    .service .services .service_item .rectangle p {
+        width: 201px;
+        height: 40px;
+        margin: 10px auto 0;
+        text-align: center;
+    }
+
+    .prices {
+        width: 768px;
+        height: 585px;
+        padding: 40px 50px 88px;
+    }
+
+    .prices .prices_wrapper .leafs {
+        position: absolute;
+        width: 152px;
+        height: 174.98px;
+        left: 526px;
+        top: 272px;
+        transform: scale(1.0);
+    }
+
+    .prices .prices_wrapper .prices_bar h2 {
+        font-size: 35px;
+        line-height: 42px;
+        width: 135px;
+        height: 49px;
+        text-align: center;
+    }
+
+    .prices .prices_wrapper .prices_bar .prices_items {
+        margin-top: 50px;
+    }
+
+    .prices .prices_wrapper {
+        width: 668px;
+        height: 457px;
+    }
+
+    .prices .prices_wrapper .text_call_us h2 {
+        margin-top: 99px;
+        width: 296px;
+        height: 78px;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 35px;
+    }
+
+    .prices .prices_wrapper .text_call_us .btn{
+        margin-top: 29px;
+    }
+
+    .contacts {
+        padding: 40px 159px 0;
+        width: 768px;
+        height: 739px;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .contacts img.woman {
+        order: 2;
+        margin-top: 250px;
+        width: 200px;
+        height: auto;
+        margin-left: 20px;
+    }
+
+    .contacts h2 {
+        order: 0;
+        margin: 0;
+    }
+
+    .contacts .city {
+        margin: 100px 0 0 0;
+    }
+
+    .contacts .city .accordeon_btn {
+        background-color: #AEA1A1;
+    }
+
+    .contacts h2 {
+        width: 192px;
+        height: 51px;
+    }
+
+
+    footer {
+        width: 768px;
+        height: 181px;
+        flex-direction: column;
+        align-items: center;
+        padding: 33px 279px 18px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        }
+
+    footer .footer_data {
+        height: 32px;
+        width: 210px;
+        justify-content: space-evenly;
+    }
+
+    footer .footer_data a {
+        height: 32px;
+        width: 210px;    
+    }
+
+
+
 }
