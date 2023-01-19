@@ -286,7 +286,6 @@ header .navbar {
 
 .service .services .service_item .rectangle h2 a {
     display: flex;
-    width: 120px;
     height: 24px;
     font-family: 'Inter', sans-serif;
     font-style: normal;
