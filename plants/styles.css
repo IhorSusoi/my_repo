@@ -824,7 +824,7 @@ footer .social_list {
         left: -100%;
         top: 0;
         width: 100%;
-        margin: auto;
+        margin: 0 auto;
         height: 100%;
         z-index: 2;
         transition: 0.3s;
