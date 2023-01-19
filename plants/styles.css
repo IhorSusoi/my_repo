@@ -29,6 +29,11 @@ header {
     margin: auto;
 }
 
+#burgerMenu {
+    display: none;
+
+}
+
 
 
 .navbar {
@@ -78,6 +83,7 @@ header .navbar {
     padding: 62px 109px;
     box-sizing: border-box;
     background-color: #EDF2EC;
+    justify-content: space-between;
 }
 
 .leafs {
@@ -373,6 +379,7 @@ header .navbar {
     font-size: 20px;
     line-height: 20px;
     color: #000000;
+    align-items: center;
 }
 
 .prices .prices_wrapper .prices_bar .prices_items .prices_item .accordeon_btn{
@@ -544,12 +551,16 @@ footer .social_list {
         height: 420px;
         padding: 40px 50px 70px;
         flex-direction: row-reverse;
-        align-items: flex-end;
     }
 
     .leafs {
-            transform: scale(0.625);
-            top: 25px;
+        width: 280px;
+        height: 254.15px;
+    }
+
+    .leafs img {
+        width: 280px;
+        height: 254.15px;
     }
 
     .welcome_text {
@@ -679,13 +690,9 @@ footer .social_list {
         padding: 40px 50px 88px;
     }
 
-    .prices .prices_wrapper .leafs {
-        position: absolute;
+    .prices .prices_wrapper .leafs img {
         width: 152px;
         height: 174.98px;
-        left: 526px;
-        top: 272px;
-        transform: scale(1.0);
     }
 
     .prices .prices_wrapper .prices_bar h2 {
@@ -775,7 +782,347 @@ footer .social_list {
         height: 32px;
         width: 210px;    
     }
+}
 
+@media screen and 
+    (max-width: 767px) {
 
+    .w1440px {
+        max-width: 380px;
+        min-width: 320px;
+        width: 100%;
+    }
 
+    .header1440px {
+        height: 96px;
+        max-width: 380px;
+        min-width: 320px;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 36px 25px;
+        margin: auto;
+    }
+
+    header .logo {
+        top: 0;
+    }
+
+    .navbar {
+        justify-content: space-between;
+    }
+
+    #burgerMenu {
+        display: block;
+    }
+
+    .navbar nav {
+        display: none;
+    }
+
+    .welcome {
+        max-width: 380px;
+        min-width: 320px;
+        width: 100%;
+        padding: 24px 25px;
+        height: 300px;
+        justify-content: center;
+    }
+
+    .leafs {
+        display: none;
+    }
+
+    .welcome_text {
+        max-width: 330px;
+        min-width: 320px;
+        width: 100%;
+        height: 252px;
+        margin: 0;
+    }
+
+    .welcome_text h1 {
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 35px;
+        max-width: 330px;
+        min-width: 320px;
+        width: 100%;
+        height: 72px;
+    }
+
+    .welcome_text p {
+        max-width: 314px;
+        width: 100%;
+        height: 105px;
+        margin: 20px 15px 0 0;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .welcome_text .learn_more {
+        margin-top: 20px;
+        width: 100px;
+        height: 34.14px;
+        font-size: 10px;
+        line-height: 20px;
+    }
+
+    .about {
+        max-width: 380px;
+        min-width: 320px;
+        width: 100%;
+        height: 516px;
+        display: flex;
+        flex-direction: column;
+        padding: 30px 25px 31px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .about .about_text h2 {
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 33px;
+        width: 288px;
+        height: 58px;
+        text-align: center;
+    }
+
+    .about .about_text {
+        display: flex;
+        max-width: 380px;
+        min-width: 320px;
+        width: 100%;
+        margin: 0;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .about .about_text p {
+        max-width: 330px;
+        min-width: 320px;
+        width: 100%;
+        height: 228px;
+        font-size: 15px;
+        line-height: 25px;
+        margin: 21px 0 0 0;
+    }
+
+    .about img {
+        margin: 0;
+        width: 150px;
+        height: auto;
+    }
+
+    .service {
+        max-width: 380px;
+        min-width: 320px;
+        width: 100%;
+        height: auto;
+        padding: 30px 25px 27px;
+    }
+
+    .service .services_content {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .service .services_content h2 {
+        width: 187px;
+        height: 69px;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 33px;
+    }
+
+    .service .services_content .services_btns {
+        width: 252px;
+        height: 79px;
+        margin: 35px 0 40px;
+        flex-wrap: wrap;
+        align-content: space-between;
+    }
+
+    .service .services_content .services_btns .btn {
+        width: 121px;
+        height: 35px;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .service .services {
+        width: 280px;
+        height: 2870px;
+        margin-top: 0;
+        margin: 0 auto;
+    }
+
+    .service .services .service_item {
+        width: 280px;
+        height: 450px;
+    }
+
+    .service .services .service_item img.img768 {
+        display: block;
+    }
+
+    .service .services .service_item img.img1440 {
+        display: none;
+    }
+
+    .service .services .service_item .rectangle {
+        width: 280px;
+        height: 100px;
+    }
+
+    .service .services .service_item .rectangle p {
+        width: 201px;
+        height: 40px;
+        margin: 10px auto 0;
+        text-align: center;
+    }
+
+    .prices {
+        max-width: 380px;
+        min-width: 320px;
+        width: 100%;
+        height: auto;
+        padding: 25px 0 40px;
+    }
+
+    .prices .prices_wrapper .leafs {
+        display: none;
+    }
+
+    .prices .prices_wrapper .prices_bar {
+        width: 100%;
+        height: 302px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .prices .prices_wrapper .prices_bar h2 {
+        font-size: 25px;
+        line-height: 30px;
+        width: 90px;
+        height: 27px;
+        text-align: center;
+    }
+
+    .prices .prices_wrapper .prices_bar .prices_items {
+        margin-top: 40px;
+        width: 224px;
+        height: 235px;
+        padding: 29px 22px;
+    }
+
+    .prices .prices_wrapper .prices_bar .prices_items .prices_item {
+        width: 180px;
+        height: 50px;
+        padding: 15px 40px 15px 30px;
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .prices .prices_wrapper {
+        width: 230px;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+    }
+
+    .prices .prices_wrapper .text_call_us {
+        width: 230px;
+        height: 126px;
+        align-items: center;
+        margin-top: 19px;
+    }
+
+    .prices .prices_wrapper .text_call_us h2 {
+        margin-top: 0;
+        width: 230px;
+        height: 77px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 35px;
+        text-align: center;
+    }
+
+    .prices .prices_wrapper .text_call_us .btn{
+        margin-top: 14px;
+        width: 121px;
+        height: 35px;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .contacts {
+        padding: 25px 42px 0;
+        max-width: 380px;
+        min-width: 320px;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .contacts img.woman {
+        order: 2;
+        width: 100px;
+        height: auto;
+        margin: 132px 0 0 0;
+    }
+
+    .contacts h2 {
+        order: 0;
+        margin: 0;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 33px;
+        width: 192px;
+        height: 34px;
+        text-align: center;
+    }
+
+    .contacts .city {
+        margin: 80px 0 0 0;
+        width: 300px;
+        height: 50px;
+        padding: 5px 20px;
+    }
+
+    .contacts .city .accordeon_btn {
+        background-color: #AEA1A1;
+    }
+
+    footer {
+        max-width: 380px;
+        min-width: 320px;
+        width: 100%;
+        height: 146px;
+        flex-direction: column;
+        align-items: center;
+        padding: 22px 0 7px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        }
+
+    footer .footer_data {
+        height: 32px;
+        width: 210px;
+        justify-content: space-evenly;
+    }
+
+    footer .footer_data a {
+        height: 32px;
+        width: 210px;    
+    }
 }
