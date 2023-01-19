@@ -1,5 +1,14 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
+    margin: 0;
+}
+
+.w1440px {
     width: 1440px;
+    height: fit-content;
     margin: auto;
 }
 
@@ -9,20 +18,22 @@ a {
 }
 
 header {
-    height: 134px;
     background-color: #EDF2EC;
 }
 
-main {
-    background-color: #EDF2EC;;
+.header1440px {
+    height: 134px;
+    width: 1440px;
+    box-sizing: border-box;
+    padding: 42px 110px;
+    margin: auto;
+}
+
+#burgerMenu {
+    display: none;
 }
 
 .navbar {
-    position: relative;
-    width: 1220px;
-    height: 50px;
-    left: 111px;
-    top: 42px;
     display: flex;
 }
 
@@ -35,13 +46,14 @@ main {
 .navbar ul {
     display: flex;
     padding: 0;
+    justify-content: space-between;
+    height: 50px;
 }
 
 .navbar li {
     list-style: none;
-    flex-direction: row;
-    flex-wrap: wrap;
-    flex: auto;
+    display: flex;
+    height: 50px;
 }
 
 header .logo {
@@ -60,6 +72,17 @@ header .navbar {
     color: #000000;
 }
 
+.welcome {
+    width: 1440px;
+    margin: auto;
+    display: flex;
+    height: 532px;
+    padding: 62px 109px;
+    box-sizing: border-box;
+    background-color: #EDF2EC;
+    justify-content: space-between;
+}
+
 .leafs {
     position: relative;
     width: 448.8px;
@@ -71,15 +94,8 @@ header .navbar {
     margin-top: 36px;
 }
 
-.welcome {
-    display: flex;
-    height: 532px;
-    padding: 62px 109px;
-    box-sizing: border-box;
-}
-
 .welcome_text h1 {
-    font-family: 'Inika', serif;
+    font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 45px;
@@ -87,10 +103,11 @@ header .navbar {
     color: #717171;
     width: 549px;
     height: 101px;
+    margin: 0;
 }
 
 .welcome_text p {
-    font-family: 'Inika', serif;
+    font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -98,6 +115,7 @@ header .navbar {
     color: #636060;
     width: 525.44px;
     height: 105px;
+    margin: 42px 0 0 0;
 }
 
 .welcome_text .learn_more {
@@ -105,22 +123,23 @@ header .navbar {
     box-sizing: border-box;
     width: 158px;
     height: 44px;
+    margin-top: 48px;
     border: 2px solid #E06733;
     border-radius: 10px;
     color: #000000;
     text-transform: uppercase;
-    font-family: 'Inika', serif;
+    font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
     cursor: pointer;
     bottom: 0px;
+    transition: 500ms;
 }
 
 .welcome_text .learn_more:hover {
     color: #EDF2EC;
-    transition: 500ms;
     background-color: #E06733;
 }
 
@@ -152,7 +171,7 @@ header .navbar {
 }
 
 .about .about_text p {
-    font-family: 'Inika', serif;
+    font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -160,6 +179,7 @@ header .navbar {
     color: #636060;
     width: 605px;
     height: 208px;
+    margin: 40px 0 0 0;
 }
 
 .about img {
@@ -169,6 +189,7 @@ header .navbar {
 .service {
     background-color: #EDF2EC;
     width: 1440px;
+    margin: auto;
     height: 1300px;
     box-sizing: border-box;
     padding: 40px 109px 121px;
@@ -178,7 +199,6 @@ header .navbar {
     width: 1007px;
     height: 94px;
     display: inline-flex;
-    align-items: center;
 }
 
 .service .services_content h2 {
@@ -200,6 +220,7 @@ header .navbar {
     justify-content: space-between;
     width: 559px;
     height: 50px;
+    margin-top: 29px;
 }
 
 .service .services_content .services_btns .btn {
@@ -215,12 +236,12 @@ header .navbar {
     line-height: 26px;
     color: #E06733;
     cursor: pointer;
+    transition: 500ms;
 }
 
 
 .service .services_content .services_btns .btn:hover {
     color: #EDF2EC;
-    transition: 500ms;
     background-color: #E06733;
 }
 
@@ -244,6 +265,10 @@ header .navbar {
     border-radius: 20px 20px 0px 0px;
 }
 
+.service .services .service_item img.img768{
+    display: none;
+}
+
 .service .services .service_item .rectangle {
     box-sizing: border-box;
     width: 330px;
@@ -257,25 +282,844 @@ header .navbar {
 }
 
 .service .services .service_item .rectangle h2 a {
+    display: flex;
     width: 120px;
     height: 24px;
-    font-family: 'Inika', serif;
+    font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
     line-height: 20px;
     color: #E06733;
-    margin: 10px 105px 0;
+    margin: 10px auto 0;
+    justify-content: center;
 }
 
 .service .services .service_item .rectangle p {
     margin: 10px 31px 0;
     width: 267.19px;
     height: 20px;
-    font-family: 'Inika', serif;
+    font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
     color: #717171;
+}
+
+.prices {
+    box-sizing: border-box;
+    padding: 40px 109px 115px;
+    width: 1440px;
+    height: 560px;
+    background: #FFFFFF;
+}
+
+.prices .prices_wrapper {
+    width: 1222px;
+    height: 405px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.prices .prices_wrapper .leafs {
+    position: absolute;
+    width: 152px;
+    height: 174.99px;
+    bottom: 0;
+    right: 0;
+}
+
+.prices .prices_wrapper .prices_bar {
+    width: 332px;
+    height: 391.01px;
+}
+
+.prices .prices_wrapper .prices_bar h2 {
+    width: 135px;
+    height: 49px;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    color: #000000;
+}
+
+.prices .prices_wrapper .prices_bar .prices_items {
+    display: flex;
+    box-sizing: border-box;
+    padding: 34px 41px;
+    width: 332px;
+    height: 282.01px;
+    margin-top: 60px;
+    border: 1px solid #E3E1D5;
+    border-radius: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.prices .prices_wrapper .prices_bar .prices_items .prices_item {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 16px 40px;
+    width: 250px;
+    height: 50px;
+    background: #EDF2EC;
+    border-radius: 20px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+    align-items: center;
+}
+
+.prices .prices_wrapper .prices_bar .prices_items .prices_item .accordeon_btn{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #D9D9D9;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    display: flex;
+}
+
+.prices .prices_wrapper .text_call_us {
+    display: flex;
+    width: 452px;
+    height: 191.01px;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.prices .prices_wrapper .text_call_us h2 {
+    width: 452px;
+    height: 103px;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: right;
+}
+
+.prices .prices_wrapper .text_call_us .btn {
+    box-sizing: border-box;
+    width: 161px;
+    height: 50px;
+    border: 1px solid #E06733;
+    border-radius: 5px;
+    font-family: 'Inika', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    color: #E06733;
+    cursor: pointer;
+    margin-top: 38px;
+    background-color: #ffffff;
+    transition: 500ms;
+}
+
+.prices .prices_wrapper .text_call_us .btn:hover {
+    color: #EDF2EC;
+    background-color: #E06733;
+}
+
+.contacts {
+    box-sizing: border-box;
+    padding: 0 109px;
+    width: 1440px;
+    height: 550px;
+    margin: auto;
+    display: flex;
+}
+
+.contacts h2 {
+    margin: 60px 64px 0 113px;
+    width: 195px;
+    height: 51px;
+    font-family: 'Inika', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 52px;
+    color: #499A18;
+}
+
+.contacts .city {
+    margin: 148px 0 0 0;
+    width: 450px;
+    height: 50px;
+    background-color: #D6E7D2;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 5px 35px 5px 20px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 40px;
+    letter-spacing: 0.05em;
+    color: #717171;
+}
+
+.contacts .city .accordeon_btn {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #D9D9D9;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    display: flex;
+    margin-top: 12px;
+}
+
+.contacts img.woman {
+    margin-top: 53px;
+}
+
+footer {
+    width: 1440px;
+    height: 130px;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 40px 109px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 50px;
+    color: #000000;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .footer_data {
+    height: 50px;
+    width: 182px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .social_list {
+    width: 188px;
+    height: 50px;
+    box-sizing: border-box;
+    padding: 9px 3px;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and 
+    (max-width: 1439px) and 
+    (min-width: 768px) {
+
+    .w1440px {
+        width: 768px;
+    }
+
+    .header1440px {
+        height: 117px;
+        width: 768px;
+        box-sizing: border-box;
+        padding: 35px 50px;
+        margin: auto;
+    }
+
+    .navbar nav {
+        width: 452px;
+        height: 47px;
+        margin-left: 139px;
+    }
+
+    .welcome {
+        width: 768px;
+        height: 420px;
+        padding: 40px 50px 70px;
+        flex-direction: row-reverse;
+    }
+
+    .leafs {
+        width: 280px;
+        height: 254.15px;
+    }
+
+    .leafs img {
+        width: 280px;
+        height: 254.15px;
+    }
+
+    .welcome_text {
+        width: 346px;
+        height: 310px;
+        margin: 0;
+    }
+
+    .welcome_text h1 {
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 50px;
+        width: 341px;
+        height: 101px;
+    }
+
+    .welcome_text p {
+        width: 341px;
+        height: 105px;
+        margin: 30px 0 0 5px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .welcome_text .learn_more {
+         margin-top: 30px;
+    }
+
+    .about {
+        width: 768px;
+        height: 783px;
+        display: flex;
+        flex-direction: column;
+        padding: 40px 50px 95px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .about .about_text h2 {
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 46px;
+        width: 423px;
+        height: 102px;
+        text-align: center;
+    }
+
+    .about .about_text {
+        display: flex;
+        width: 668px;
+        height: 350px;
+        margin: 0;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .about .about_text p {
+        width: 668px;
+        height: 208px;
+    }
+
+    .about img {
+        margin: 0;
+        width: 250px;
+        height: auto;
+    }
+
+    .service {
+        width: 768px;
+        height: 1780px; 
+        padding: 60px 50px 70px;
+    }
+
+    .service .services_content {
+        width: 668px;
+        height: 184px;
+        flex-direction: column;
+    }
+
+    .service .services_content h2 {
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 46px;
+    }
+
+    .service .services_content .services_btns {
+        width: 559px;
+        height: 50px;
+        margin: 40px 0;
+    }
+
+    .service .services {
+        width: 668px;
+        height: 1426px;
+        margin-top: 40px;
+    }
+
+    .service .services .service_item {
+        width: 281px;
+        height: 450px;
+    }
+
+    .service .services .service_item img.img768 {
+        display: block;
+    }
+
+    .service .services .service_item img.img1440 {
+        display: none;
+    }
+
+    .service .services .service_item .rectangle {
+        width: 280px;
+        height: 100px;
+    }
+
+    .service .services .service_item .rectangle p {
+        width: 201px;
+        height: 40px;
+        margin: 10px auto 0;
+        text-align: center;
+    }
+
+    .prices {
+        width: 768px;
+        height: 585px;
+        padding: 40px 50px 88px;
+    }
+
+    .prices .prices_wrapper .leafs img {
+        width: 152px;
+        height: 174.98px;
+    }
+
+    .prices .prices_wrapper .prices_bar h2 {
+        font-size: 35px;
+        line-height: 42px;
+        width: 135px;
+        height: 49px;
+        text-align: center;
+    }
+
+    .prices .prices_wrapper .prices_bar .prices_items {
+        margin-top: 50px;
+    }
+
+    .prices .prices_wrapper {
+        width: 668px;
+        height: 457px;
+    }
+
+    .prices .prices_wrapper .text_call_us h2 {
+        margin-top: 99px;
+        width: 296px;
+        height: 78px;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 35px;
+    }
+
+    .prices .prices_wrapper .text_call_us .btn{
+        margin-top: 29px;
+    }
+
+    .contacts {
+        padding: 40px 159px 0;
+        width: 768px;
+        height: 739px;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .contacts img.woman {
+        order: 2;
+        margin-top: 250px;
+        width: 200px;
+        height: auto;
+        margin-left: 20px;
+    }
+
+    .contacts h2 {
+        order: 0;
+        margin: 0;
+    }
+
+    .contacts .city {
+        margin: 100px 0 0 0;
+    }
+
+    .contacts .city .accordeon_btn {
+        background-color: #AEA1A1;
+    }
+
+    .contacts h2 {
+        width: 192px;
+        height: 51px;
+    }
+
+
+    footer {
+        width: 768px;
+        height: 181px;
+        flex-direction: column;
+        align-items: center;
+        padding: 33px 279px 18px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        }
+
+    footer .footer_data {
+        height: 32px;
+        width: 210px;
+        justify-content: space-evenly;
+    }
+
+    footer .footer_data a {
+        height: 32px;
+        width: 210px;    
+    }
+}
+
+@media screen and 
+    (max-width: 767px) {
+
+    .w1440px {
+        max-width: 380px;
+        min-width: 320px;
+        width: 100%;
+    }
+
+    .header1440px {
+        height: 96px;
+        max-width: 380px;
+        min-width: 320px;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 36px 25px;
+        margin: auto;
+    }
+
+    header .logo {
+        top: 0;
+    }
+
+    .navbar {
+        justify-content: space-between;
+    }
+
+    #burgerMenu {
+        display: block;
+    }
+
+    .navbar nav {
+        display: none;
+    }
+
+    .welcome {
+        max-width: 380px;
+        min-width: 320px;
+        width: 100%;
+        padding: 24px 25px;
+        height: 300px;
+        justify-content: center;
+    }
+
+    .leafs {
+        display: none;
+    }
+
+    .welcome_text {
+        max-width: 330px;
+        min-width: 320px;
+        width: 100%;
+        height: 252px;
+        margin: 0;
+    }
+
+    .welcome_text h1 {
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 35px;
+        max-width: 330px;
+        min-width: 320px;
+        width: 100%;
+        height: 72px;
+    }
+
+    .welcome_text p {
+        max-width: 314px;
+        width: 100%;
+        height: 105px;
+        margin: 20px 15px 0 0;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .welcome_text .learn_more {
+        margin-top: 20px;
+        width: 100px;
+        height: 34.14px;
+        font-size: 10px;
+        line-height: 20px;
+    }
+
+    .about {
+        max-width: 380px;
+        min-width: 320px;
+        width: 100%;
+        height: 516px;
+        display: flex;
+        flex-direction: column;
+        padding: 30px 25px 31px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .about .about_text h2 {
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 33px;
+        width: 288px;
+        height: 58px;
+        text-align: center;
+    }
+
+    .about .about_text {
+        display: flex;
+        max-width: 380px;
+        min-width: 320px;
+        width: 100%;
+        margin: 0;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .about .about_text p {
+        max-width: 330px;
+        min-width: 320px;
+        width: 100%;
+        height: 228px;
+        font-size: 15px;
+        line-height: 25px;
+        margin: 21px 0 0 0;
+    }
+
+    .about img {
+        margin: 0;
+        width: 150px;
+        height: auto;
+    }
+
+    .service {
+        max-width: 380px;
+        min-width: 320px;
+        width: 100%;
+        height: auto;
+        padding: 30px 25px 27px;
+    }
+
+    .service .services_content {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .service .services_content h2 {
+        width: 187px;
+        height: 69px;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 33px;
+    }
+
+    .service .services_content .services_btns {
+        width: 252px;
+        height: 79px;
+        margin: 35px 0 40px;
+        flex-wrap: wrap;
+        align-content: space-between;
+    }
+
+    .service .services_content .services_btns .btn {
+        width: 121px;
+        height: 35px;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .service .services {
+        width: 280px;
+        height: 2870px;
+        margin-top: 0;
+        margin: 0 auto;
+    }
+
+    .service .services .service_item {
+        width: 280px;
+        height: 450px;
+    }
+
+    .service .services .service_item img.img768 {
+        display: block;
+    }
+
+    .service .services .service_item img.img1440 {
+        display: none;
+    }
+
+    .service .services .service_item .rectangle {
+        width: 280px;
+        height: 100px;
+    }
+
+    .service .services .service_item .rectangle p {
+        width: 201px;
+        height: 40px;
+        margin: 10px auto 0;
+        text-align: center;
+    }
+
+    .prices {
+        max-width: 380px;
+        min-width: 320px;
+        width: 100%;
+        height: auto;
+        padding: 25px 0 40px;
+    }
+
+    .prices .prices_wrapper .leafs {
+        display: none;
+    }
+
+    .prices .prices_wrapper .prices_bar {
+        width: 100%;
+        height: 302px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .prices .prices_wrapper .prices_bar h2 {
+        font-size: 25px;
+        line-height: 30px;
+        width: 90px;
+        height: 27px;
+        text-align: center;
+    }
+
+    .prices .prices_wrapper .prices_bar .prices_items {
+        margin-top: 40px;
+        width: 224px;
+        height: 235px;
+        padding: 29px 22px;
+    }
+
+    .prices .prices_wrapper .prices_bar .prices_items .prices_item {
+        width: 180px;
+        height: 50px;
+        padding: 15px 40px 15px 30px;
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .prices .prices_wrapper {
+        width: 230px;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+    }
+
+    .prices .prices_wrapper .text_call_us {
+        width: 230px;
+        height: 126px;
+        align-items: center;
+        margin-top: 19px;
+    }
+
+    .prices .prices_wrapper .text_call_us h2 {
+        margin-top: 0;
+        width: 230px;
+        height: 77px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 35px;
+        text-align: center;
+    }
+
+    .prices .prices_wrapper .text_call_us .btn{
+        margin-top: 14px;
+        width: 121px;
+        height: 35px;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .contacts {
+        padding: 25px 42px 0;
+        max-width: 380px;
+        min-width: 320px;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .contacts img.woman {
+        order: 2;
+        width: 100px;
+        height: auto;
+        margin: 132px 0 0 0;
+    }
+
+    .contacts h2 {
+        order: 0;
+        margin: 0;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 33px;
+        width: 192px;
+        height: 34px;
+        text-align: center;
+    }
+
+    .contacts .city {
+        margin: 80px 0 0 0;
+        width: 300px;
+        height: 50px;
+        padding: 5px 20px;
+    }
+
+    .contacts .city .accordeon_btn {
+        background-color: #AEA1A1;
+    }
+
+    footer {
+        max-width: 380px;
+        min-width: 320px;
+        width: 100%;
+        height: 146px;
+        flex-direction: column;
+        align-items: center;
+        padding: 22px 0 7px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        }
+
+    footer .footer_data {
+        height: 32px;
+        width: 210px;
+        justify-content: space-evenly;
+    }
+
+    footer .footer_data a {
+        height: 32px;
+        width: 210px;    
+    }
 }
