@@ -31,10 +31,7 @@ header {
 
 #burgerMenu {
     display: none;
-
 }
-
-
 
 .navbar {
     display: flex;
@@ -286,7 +283,6 @@ header .navbar {
 
 .service .services .service_item .rectangle h2 a {
     display: flex;
-    width: 120px;
     height: 24px;
     font-family: 'Inter', sans-serif;
     font-style: normal;
@@ -813,10 +809,59 @@ footer .social_list {
 
     #burgerMenu {
         display: block;
+        cursor: pointer;
+        transition: 0.3s;
+        transform: rotate(0);
+        z-index: 3;
+        transition: 0.3s;
     }
 
-    .navbar nav {
-        display: none;
+    #nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 96px;
+        width: 100%;
+        margin: auto;
+        height: 250px;
+        z-index: 2;
+        transition: 0.3s;
+    }
+
+    .navbar nav ul {
+        flex-direction: column;
+        height: 250px;
+        width: 100%;
+        background-color: #EDF2EC;
+        align-items: center;
+        box-sizing: border-box;
+    }
+
+    .navbar nav ul li {
+        align-items: center;
+        box-sizing: border-box;
+        border: #499A18 solid 1px;
+        border-radius: 2px;
+        width: 100%;
+        height: 20%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar nav ul li:nth-child(1) {
+        border-top: #499A18 solid 2px;
+    }
+
+    .navbar nav ul li:nth-child(5) {
+        border-bottom: #499A18 solid 2px;
+    }
+
+    .navbar nav ul li a {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .welcome {

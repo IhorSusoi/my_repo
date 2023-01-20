@@ -17,7 +17,7 @@
     <script src="index.js"></script>
     <title>Plants</title>
 </head>
-<body>
+<body id="body" onclick="navbar()">
     <header>
         <div class="header1440px">
         <div class="navbar">
@@ -25,14 +25,15 @@
                 <a href="index.html" title="Plants"><img src="logo1.svg" alt="leaf">
                 <img src="logo2.svg" alt="leaf" style="margin-left: -15px;">Plants</a>
             </div>
-            <img id="burgerMenu" src="burger.svg" alt="burger_menu">
-            <nav>
+            
+            <img id="burgerMenu" src="burger.svg" alt="burger_menu" onclick="clickOnBurgerFoo()">
+            <nav id="nav-menu">
                 <ul>
-                    <li><a href="index.html" title="Plants" style="color: #E06733; font-weight: 700;">Home</a></li>
-                    <li><a href="#about" title="About">About us</a></li>
-                    <li><a href="#service" title="Service">Service</a></li>
-                    <li><a href="#price" title="Price">Price</a></li>
-                    <li><a href="#contacts" title="Contacts">Contacts</a></li>
+                    <li onclick="navbar()"><a href="index.html" title="Plants" style="color: #E06733; font-weight: 700;">Home</a></li>
+                    <li onclick="navbar()"><a href="#about" title="About">About us</a></li>
+                    <li onclick="navbar()"><a href="#service" title="Service">Service</a></li>
+                    <li onclick="navbar()"><a href="#price" title="Price">Price</a></li>
+                    <li onclick="navbar()"><a href="#contacts" title="Contacts">Contacts</a></li>
                 </ul>
             </nav>
         </div>
@@ -175,10 +176,10 @@
         </div>
         <a href="https://rs.school/js-stage0/" title="go to Rolling Scopes School">Rolling Scopes School</a>
         <div class="social_list">
-            <a href="instagram.com"><img src="inst.svg" alt="Instagram"></a>
-            <a href="facebook.com"><img src="fb.svg" alt="Facebook"></a>
-            <a href="twitter.com"><img src="tw.svg" alt="Twitter"></a>
-            <a href="pinterest.com"><img src="pinterest.svg" alt="Pinterest"></a>
+            <a href="https://instagram.com"><img src="inst.svg" alt="Instagram"></a>
+            <a href="https://facebook.com"><img src="fb.svg" alt="Facebook"></a>
+            <a href="https://twitter.com"><img src="tw.svg" alt="Twitter"></a>
+            <a href="https://pinterest.com"><img src="pinterest.svg" alt="Pinterest"></a>
         </div>
     </footer>
 </body>
