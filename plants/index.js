@@ -19,6 +19,7 @@ function navbarOpen() {
         burger.style.transform = "rotate(0)";
     } else burger.style.transform = "rotate(-90deg)";
 
+
     let navMenu = document.getElementById("nav-menu");
     if (navMenu.style.left === "0px") {
         navMenu.style.left = "-100%";

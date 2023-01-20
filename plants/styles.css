@@ -808,6 +808,7 @@ footer .social_list {
     }
 
     #burgerMenu {
+        position: relative;
         display: block;
         cursor: pointer;
         transition: 0.3s;
