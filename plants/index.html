@@ -17,16 +17,15 @@
     <script src="index.js"></script>
     <title>Plants</title>
 </head>
-<body>
+<body id="body" onclick="navbar()">
     <header>
         <div class="header1440px">
         <div class="navbar">
             <div class="logo">
                 <a href="index.html" title="Plants"><img src="logo1.svg" alt="leaf">
                 <img src="logo2.svg" alt="leaf" style="margin-left: -15px;">Plants</a>
-            </div>
-            <a href="javascript:void(0);" class="icon" onclick="navbar()">
-            <img id="burgerMenu" src="burger.svg" alt="burger_menu"></a>
+            </div>         
+            <img id="burgerMenu" src="burger.svg" alt="burger_menu" onclick="clickOnBurgerFoo()">
             <nav id="nav-menu">
                 <ul>
                     <li onclick="navbar()"><a href="index.html" title="Plants" style="color: #E06733; font-weight: 700;">Home</a></li>
