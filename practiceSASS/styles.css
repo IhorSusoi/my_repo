@@ -1,0 +1,16 @@
+body {
+  background-color: white;
+  width: 1440px;
+  margin: auto;
+}
+body header {
+  background-color: bisque;
+}
+body header div {
+  width: 1440px;
+  height: 250px;
+  margin: auto;
+  background-color: aquamarine;
+}
+
+/*# sourceMappingURL=styles.css.map */
