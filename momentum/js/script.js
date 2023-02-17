@@ -113,8 +113,6 @@ document.addEventListener("DOMContentLoaded", function(){
         } else {
             weatherWindArrow.style.display = 'none';
         }
-
-
     }
 
     let cityInput = document.getElementById("savedCity");
@@ -152,4 +150,12 @@ document.addEventListener("DOMContentLoaded", function(){
     }
 
     getWeather();
+
+    async function getQuotes() {  
+        const quotes = './js/quotes.json';
+        const res = await fetch(quotes);
+        const data = await res.json(); 
+        console.log(data);
+      }
+      getQuotes();
 });
