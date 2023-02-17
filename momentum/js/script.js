@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function(){
         weatherWindDir = weatherWindDirection(data.wind.deg);
         weatherIcon.className = 'weather-icon owf';
         weatherIcon.classList.add(`owf-${data.weather[0].id}`);
-        temperature.textContent = `${data.main.temp}°C`;
+        temperature.textContent = `${Math.floor(data.main.temp)}°C`;
         weatherDescription.textContent = data.weather[0].description;    
         weatherHumidity.textContent = 'Humidity: ' + data.main.humidity + '%';
         weatherWind.textContent = 'Wind: ' + data.wind.speed + ' m/s ' + weatherWindDir;
@@ -111,6 +111,7 @@ document.addEventListener("DOMContentLoaded", function(){
         } else {
             weatherWindArrow.style.display = 'none';
         }
+        console.log(data);
     }
 
     let cityInput = document.getElementById("savedCity");
@@ -122,6 +123,7 @@ document.addEventListener("DOMContentLoaded", function(){
     let savedCity = localStorage.getItem("city");
     if (savedCity) {
     cityInput.value = savedCity;
+    city = savedCity;
     document.getElementById("savedCity").textContent = savedCity;
     }
 
@@ -162,6 +164,11 @@ document.addEventListener("DOMContentLoaded", function(){
     const quoteAuthor = document.querySelector('.author');
     const quoteChange = document.querySelector('.change-quote');
 
-    quoteChange.addEventListener('click', getQuotes);
+    quoteChange.addEventListener('click', () => {
+        getQuotes();
+        getWeather();
+    });
+
     getQuotes();
+
 });
