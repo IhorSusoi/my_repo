@@ -100,10 +100,21 @@ document.addEventListener("DOMContentLoaded", function(){
         const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=en&appid=553daacacff92b4b81ef6bef38bb8c54&units=metric`;
         const res = await fetch(url);
         const data = await res.json(); 
+        weatherWindDir = weatherWindDirection(data.wind.deg);
         weatherIcon.className = 'weather-icon owf';
         weatherIcon.classList.add(`owf-${data.weather[0].id}`);
         temperature.textContent = `${data.main.temp}°C`;
         weatherDescription.textContent = data.weather[0].description;    
+        weatherHumidity.textContent = 'Humidity: ' + data.main.humidity + '%';
+        weatherWind.textContent = 'Wind: ' + data.wind.speed + ' m/s ' + weatherWindDir;
+        if(data.wind.deg){
+            weatherWindArrow.style.transform = `rotate(${data.wind.deg}deg)`;
+            weatherWindArrow.style.display = 'block';
+        } else {
+            weatherWindArrow.style.display = 'none';
+        }
+
+
     }
 
     let cityInput = document.getElementById("savedCity");
@@ -123,6 +134,22 @@ document.addEventListener("DOMContentLoaded", function(){
     const weatherIcon = document.querySelector('.weather-icon');
     const temperature = document.querySelector('.temperature');
     const weatherDescription = document.querySelector('.weather-description');
+    const weatherHumidity = document.querySelector('.humidity');
+    const weatherWind = document.querySelector('.wind');
+    let weatherWindDir = '';
+    const weatherWindArrow = document.querySelector('#windDirection');
+
+    function weatherWindDirection(x){
+        if(x>=350&&x<=10&&x!=0)return 'N';
+        if(x>10&&x<80) return 'NE';
+        if(x>=80&&x<=100) return 'E';
+        if(x>100&&x<170)return 'ES';
+        if(x>=170&&x<=190)return 'S';
+        if(x>190&&x<260)return 'WS';
+        if(x>=260&&x<=280)return 'W';
+        if(x>280&&x<350)return 'WN';
+        return 'stihl';
+    }
 
     getWeather();
 });
