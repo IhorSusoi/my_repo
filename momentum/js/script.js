@@ -68,7 +68,6 @@ document.addEventListener("DOMContentLoaded", function(){
         img.src = `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${timeOfDay}/${bgNum}.jpg`;
         img.addEventListener('load', () => {     
             body.style.backgroundImage = `url('https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${timeOfDay}/${bgNum}.jpg')`;
-            console.log(img);
         });
     }
     setBg();
@@ -95,4 +94,35 @@ document.addEventListener("DOMContentLoaded", function(){
     slidePrev.addEventListener('click', getSlidePrev);
     slideNext.addEventListener('click', getSlideNext);
 
+    let city = 'Kalush';
+
+    async function getWeather(){
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=en&appid=553daacacff92b4b81ef6bef38bb8c54&units=metric`;
+        const res = await fetch(url);
+        const data = await res.json(); 
+        weatherIcon.className = 'weather-icon owf';
+        weatherIcon.classList.add(`owf-${data.weather[0].id}`);
+        temperature.textContent = `${data.main.temp}°C`;
+        weatherDescription.textContent = data.weather[0].description;    
+    }
+
+    let cityInput = document.getElementById("savedCity");
+    cityInput.addEventListener("input", function() {
+    city = cityInput.value;
+    localStorage.setItem("city", city);
+    document.getElementById("savedCity").innerHTML = city;
+    });
+    let savedCity = localStorage.getItem("city");
+    if (savedCity) {
+    cityInput.value = savedCity;
+    document.getElementById("savedCity").textContent = savedCity;
+    }
+
+    cityInput.addEventListener('change', getWeather);
+
+    const weatherIcon = document.querySelector('.weather-icon');
+    const temperature = document.querySelector('.temperature');
+    const weatherDescription = document.querySelector('.weather-description');
+
+    getWeather();
 });
