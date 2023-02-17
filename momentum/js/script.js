@@ -51,13 +51,11 @@ document.addEventListener("DOMContentLoaded", function(){
     document.getElementById("savedName").textContent = savedName;
     }
 
-    function getRandomNum(){
-        min = 1;
-        max = 20;
+    function getRandomNum(min,max){
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
-    let randomNum = getRandomNum();
+    let randomNum = getRandomNum(1,20);
 
     function setBg(){
         let timeOfDay = getPartOfDay();
@@ -155,7 +153,15 @@ document.addEventListener("DOMContentLoaded", function(){
         const quotes = './js/quotes.json';
         const res = await fetch(quotes);
         const data = await res.json(); 
-        console.log(data);
-      }
-      getQuotes();
+        let x=getRandomNum(0,99);
+        quoteQuote.textContent = data.quotes[x].quote;
+        quoteAuthor.textContent = data.quotes[x].author;
+    }
+
+    const quoteQuote = document.querySelector('.quote');
+    const quoteAuthor = document.querySelector('.author');
+    const quoteChange = document.querySelector('.change-quote');
+
+    quoteChange.addEventListener('click', getQuotes);
+    getQuotes();
 });
