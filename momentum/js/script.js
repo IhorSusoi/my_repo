@@ -63,9 +63,9 @@ document.addEventListener("DOMContentLoaded", function(){
         bgNum = bgNum.padStart(2, '0');
         let body = document.querySelector('body');
         const img = new Image();
-        img.src = `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${timeOfDay}/${bgNum}.jpg`;
+        img.src = `https://raw.githubusercontent.com/IhorSusoi/backgrounds_momentum/assets/images/${timeOfDay}/${bgNum}.jpg`;
         img.addEventListener('load', () => {     
-            body.style.backgroundImage = `url('https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${timeOfDay}/${bgNum}.jpg')`;
+            body.style.backgroundImage = `url('https://raw.githubusercontent.com/IhorSusoi/backgrounds_momentum/assets/images/${timeOfDay}/${bgNum}.jpg')`;
         });
     }
     setBg();
@@ -97,35 +97,57 @@ document.addEventListener("DOMContentLoaded", function(){
     async function getWeather(){
         const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=en&appid=553daacacff92b4b81ef6bef38bb8c54&units=metric`;
         const res = await fetch(url);
-        const data = await res.json(); 
+        const data = await res.json();
+        if(data.cod=='404'){
+            cityInput.value = savedCity;
+            city = savedCity;
+            document.getElementById("savedCity").textContent = savedCity;
+            alert('city not found');
+            localStorage.setItem("city", city);
+            getWeather();
+            return;
+        }
+        if(data.cod=='400'){
+            city = 'Kalush';
+            localStorage.setItem("city", city);
+            savedCity = localStorage.getItem("city");
+            alert('empty request, city changed to Kalush');
+            getWeather();
+            return;
+        }
         weatherWindDir = weatherWindDirection(data.wind.deg);
         weatherIcon.className = 'weather-icon owf';
         weatherIcon.classList.add(`owf-${data.weather[0].id}`);
         temperature.textContent = `${Math.floor(data.main.temp)}°C`;
         weatherDescription.textContent = data.weather[0].description;    
         weatherHumidity.textContent = 'Humidity: ' + data.main.humidity + '%';
-        weatherWind.textContent = 'Wind: ' + data.wind.speed + ' m/s ' + weatherWindDir;
+        weatherWind.textContent = 'Wind: ' + Math.floor(data.wind.speed) + ' m/s ' + weatherWindDir;
         if(data.wind.deg){
             weatherWindArrow.style.transform = `rotate(${data.wind.deg}deg)`;
             weatherWindArrow.style.display = 'block';
         } else {
             weatherWindArrow.style.display = 'none';
         }
-        console.log(data);
+        city = cityInput.value;
+        localStorage.setItem("city", city);
+        savedCity = localStorage.getItem("city");
     }
 
-    let cityInput = document.getElementById("savedCity");
-    cityInput.addEventListener("input", function() {
-    city = cityInput.value;
-    localStorage.setItem("city", city);
-    document.getElementById("savedCity").innerHTML = city;
-    });
-    let savedCity = localStorage.getItem("city");
-    if (savedCity) {
-    cityInput.value = savedCity;
-    city = savedCity;
-    document.getElementById("savedCity").textContent = savedCity;
-    }
+
+        let cityInput = document.getElementById("savedCity");
+        cityInput.addEventListener("input", function() {
+        city = cityInput.value;
+        localStorage.setItem("city", city);
+        document.getElementById("savedCity").innerHTML = city;
+        });
+        let savedCity = localStorage.getItem("city");
+        if (savedCity) {
+        cityInput.value = savedCity;
+        city = savedCity;
+        document.getElementById("savedCity").textContent = savedCity;
+        }
+
+
 
     cityInput.addEventListener('change', getWeather);
 
