@@ -1,3 +1,5 @@
+import playList from '../js/playList.js';
+
 document.addEventListener("DOMContentLoaded", function(){
     let xtime=document.getElementById("time");
     let xdate=document.getElementById("date");
@@ -193,4 +195,66 @@ document.addEventListener("DOMContentLoaded", function(){
 
     getQuotes();
 
+    const audio = new Audio();
+
+    function playAudio() {
+        if(!isPlay){
+            audio.src = playList[playNum].src;
+            audio.currentTime = 0;
+            audio.play();
+            isPlay = true;
+            play.classList.toggle('pause');
+        } else {
+            audio.pause();
+            isPlay = false;
+            play.classList.toggle('pause');
+        }
+        playListHTMLNow[playNum].classList.toggle('playListYellow');
+    }
+
+    audio.addEventListener('ended', playNextFunc);
+
+    function playNextFunc(){
+        playListHTMLNow[playNum].classList.remove('playListYellow');
+        if(playNum!=(playList.length-1)) {
+            playNum++;
+        } else playNum=0;
+        audio.src = playList[playNum].src;
+            audio.currentTime = 0;
+            audio.play();
+            isPlay = true;
+            play.classList.add('pause');
+            playListHTMLNow[playNum].classList.toggle('playListYellow');
+    }
+
+    function playPrevFunc(){
+        playListHTMLNow[playNum].classList.remove('playListYellow');
+        if(playNum!=0) {
+            playNum--;
+        } else playNum=playList.length-1;
+        audio.src = playList[playNum].src;
+            audio.currentTime = 0;
+            audio.play();
+            isPlay = true;
+            play.classList.add('pause');
+            playListHTMLNow[playNum].classList.toggle('playListYellow');
+    }
+
+    let playNum = 0;
+    let playListArr = playList;
+    let playListHTML = document.getElementById('playList3');
+    let play = document.getElementById("playButton");
+    let playNext = document.getElementById("playNext");
+    let playPrev = document.getElementById("playPrev");
+    let isPlay = false;
+    play.addEventListener('click', playAudio);
+    playNext.addEventListener('click',playNextFunc);
+    playPrev.addEventListener('click', playPrevFunc);
+    playListArr.forEach(el => {
+        let li = this.createElement('li');
+        li.classList.add('play-item');
+        li.textContent = el.title;
+        playListHTML.append(li);
+    })
+    let playListHTMLNow = document.querySelectorAll('.play-item');
 });
