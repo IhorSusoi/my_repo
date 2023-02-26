@@ -1,6 +1,6 @@
 import playList from "../js/playList.js";
 
-console.log("My mark: 85/150");
+console.log("My mark: 111/150");
 
 document.addEventListener("DOMContentLoaded", function () {
   let xtime = document.getElementById("time");
