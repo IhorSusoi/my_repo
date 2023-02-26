@@ -1,32 +1,60 @@
 import playList from "../js/playList.js";
 
-console.log('My mark: 85/150');
+console.log("My mark: 85/150");
 
 document.addEventListener("DOMContentLoaded", function () {
   let xtime = document.getElementById("time");
   let xdate = document.getElementById("date");
 
+  let englishLang = document.getElementById("ENLang");
+  let ukraineLang = document.getElementById("UALang");
+  let isEng = true;
+  let language = localStorage.getItem("lang");
+  if (!language) {
+    language = "en";
+  }
+  let languageTime = localStorage.getItem("langTime");
+  if (!languageTime) {
+    languageTime = "en-US";
+  }
+
   function showTime() {
     let time = new Date();
-    xdate.textContent = time.toLocaleDateString("en-US", {
+    xdate.textContent = time.toLocaleDateString(`${languageTime}`, {
       weekday: "long",
       month: "long",
       day: "numeric",
     });
-    xtime.textContent = time.toLocaleTimeString("en-US", { hour12: false });
+    let capitalizer = xdate.textContent;
+    capitalizer =
+      capitalizer[0].toUpperCase() + capitalizer.slice(1, capitalizer.length);
+    xdate.textContent = capitalizer;
+    xtime.textContent = time.toLocaleTimeString(`${languageTime}`, {
+      hour12: false,
+    });
     setTimeout(showTime, 1000);
-    setTimeout(showGreetings, 1000);
+    if (isEng) {
+      showGreetingsEN();
+    } else showGreetingsUA();
   }
 
   showTime();
 
-  function showGreetings() {
+  function showGreetingsEN() {
     let greeting = document.getElementById("greeting");
-    let partOfDay = getPartOfDay();
+    let partOfDay = getPartOfDayEN();
     greeting.textContent = `Good ${partOfDay}, `;
+    isEng = true;
   }
 
-  function getPartOfDay() {
+  function showGreetingsUA() {
+    let greeting = document.getElementById("greeting");
+    let partOfDay = getPartOfDayUA();
+    greeting.textContent = `${partOfDay}, `;
+    isEng = false;
+  }
+
+  function getPartOfDayEN() {
     let time = new Date();
     let hours = time.getHours();
     switch (Math.floor(hours / 6)) {
@@ -45,7 +73,70 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  showGreetings();
+  function getPartOfDayUA() {
+    let time = new Date();
+    let hours = time.getHours();
+    switch (Math.floor(hours / 6)) {
+      case 0:
+        return "Доброї ночі";
+        break;
+      case 1:
+        return "Доброго ранку";
+        break;
+      case 2:
+        return "Добрий день";
+        break;
+      case 3:
+        return "Добрий вечір";
+        break;
+    }
+  }
+
+  if (language == "en") {
+    showGreetingsEN();
+  } else showGreetingsUA();
+
+  englishLang.addEventListener("click", () => {
+    showGreetingsEN();
+    ukraineLang.classList.toggle("activeLang");
+    ukraineLang.classList.toggle("inactiveLang");
+    englishLang.classList.toggle("inactiveLang");
+    englishLang.classList.toggle("activeLang");
+    language = "en";
+    languageTime = "en-US";
+    let lang = "en";
+    localStorage.setItem("lang", lang);
+    language = lang;
+    let langTime = "en-US";
+    localStorage.setItem("langTime", langTime);
+    languageTime = langTime;
+    getWeather();
+    getQuotes();
+  });
+  ukraineLang.addEventListener("click", () => {
+    showGreetingsUA();
+    ukraineLang.classList.toggle("activeLang");
+    ukraineLang.classList.toggle("inactiveLang");
+    englishLang.classList.toggle("inactiveLang");
+    englishLang.classList.toggle("activeLang");
+    language = "ua";
+    languageTime = "uk";
+    let lang = "ua";
+    localStorage.setItem("lang", lang);
+    language = lang;
+    let langTime = "uk";
+    localStorage.setItem("langTime", langTime);
+    languageTime = langTime;
+    getWeather();
+    getQuotes();
+  });
+
+  if (language == "ua") {
+    ukraineLang.classList.toggle("activeLang");
+    ukraineLang.classList.toggle("inactiveLang");
+    englishLang.classList.toggle("inactiveLang");
+    englishLang.classList.toggle("activeLang");
+  }
 
   let nameInput = document.getElementById("savedName");
   nameInput.addEventListener("input", function () {
@@ -66,7 +157,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let randomNum = getRandomNum(1, 20);
 
   function setBg() {
-    let timeOfDay = getPartOfDay();
+    let timeOfDay = getPartOfDayEN();
     let bgNum = randomNum + "";
     bgNum = bgNum.padStart(2, "0");
     let body = document.querySelector("body");
@@ -103,7 +194,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let city = "Kalush";
 
   async function getWeather() {
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=en&appid=553daacacff92b4b81ef6bef38bb8c54&units=metric`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=${language}&appid=553daacacff92b4b81ef6bef38bb8c54&units=metric`;
     const res = await fetch(url);
     const data = await res.json();
     if (data.cod == "404") {
@@ -128,9 +219,16 @@ document.addEventListener("DOMContentLoaded", function () {
     weatherIcon.classList.add(`owf-${data.weather[0].id}`);
     temperature.textContent = `${Math.floor(data.main.temp)}°C`;
     weatherDescription.textContent = data.weather[0].description;
-    weatherHumidity.textContent = "Humidity: " + data.main.humidity + "%";
-    weatherWind.textContent =
-      "Wind: " + Math.floor(data.wind.speed) + " m/s " + weatherWindDir;
+    if (language == "en") {
+      weatherHumidity.textContent = "Humidity: " + data.main.humidity + "%";
+      weatherWind.textContent =
+        "Wind: " + Math.ceil(data.wind.speed) + " m/s " + weatherWindDir;
+    }
+    if (language == "ua") {
+      weatherHumidity.textContent = "Вологість: " + data.main.humidity + "%";
+      weatherWind.textContent =
+        "Вітер: " + Math.ceil(data.wind.speed) + " м/с " + weatherWindDir;
+    }
     if (data.wind.deg) {
       weatherWindArrow.style.transform = `rotate(${data.wind.deg}deg)`;
       weatherWindArrow.style.display = "block";
@@ -166,21 +264,39 @@ document.addEventListener("DOMContentLoaded", function () {
   const weatherWindArrow = document.querySelector("#windDirection");
 
   function weatherWindDirection(x) {
-    if (x >= 350 && x <= 10 && x != 0) return "N";
-    if (x > 10 && x < 80) return "NE";
-    if (x >= 80 && x <= 100) return "E";
-    if (x > 100 && x < 170) return "ES";
-    if (x >= 170 && x <= 190) return "S";
-    if (x > 190 && x < 260) return "WS";
-    if (x >= 260 && x <= 280) return "W";
-    if (x > 280 && x < 350) return "WN";
-    return "stihl";
+    if (language == "en") {
+      if (x >= 350 || (x <= 10 && x != 0)) return "N";
+      if (x > 10 && x < 80) return "NE";
+      if (x >= 80 && x <= 100) return "E";
+      if (x > 100 && x < 170) return "SE";
+      if (x >= 170 && x <= 190) return "S";
+      if (x > 190 && x < 260) return "SW";
+      if (x >= 260 && x <= 280) return "W";
+      if (x > 280 && x < 350) return "NW";
+      return "";
+    }
+    if (language == "ua") {
+      if (x >= 350 || (x <= 10 && x != 0)) return "Пн";
+      if (x > 10 && x < 80) return "ПнСх";
+      if (x >= 80 && x <= 100) return "Сх";
+      if (x > 100 && x < 170) return "ПдСх";
+      if (x >= 170 && x <= 190) return "Пд";
+      if (x > 190 && x < 260) return "ПдЗх";
+      if (x >= 260 && x <= 280) return "Зх";
+      if (x > 280 && x < 350) return "ПнЗх";
+      return "";
+    }
   }
 
   getWeather();
 
   async function getQuotes() {
-    const quotes = "./js/quotes.json";
+    let quotes;
+    if (language == "en") {
+      quotes = "./js/quotes.json";
+    } else {
+      quotes = "./js/quotesUA.json";
+    }
     const res = await fetch(quotes);
     const data = await res.json();
     let x = getRandomNum(0, 99);
@@ -261,4 +377,12 @@ document.addEventListener("DOMContentLoaded", function () {
     playListHTML.append(li);
   });
   let playListHTMLNow = document.querySelectorAll(".play-item");
+
+  let settingsButton = document.getElementById("settings");
+  let settingsDiv = document.querySelector(".settingsClass");
+  settingsButton.addEventListener("click", () => {
+    if (settingsDiv.style.left == "0px") {
+      settingsDiv.style.left = "-65px";
+    } else settingsDiv.style.left = "0px";
+  });
 });

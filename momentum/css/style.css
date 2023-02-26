@@ -267,6 +267,80 @@ body {
   padding: 20px;
 }
 
+.myFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.linksFooter {
+  display: flex;
+  align-items: center;
+  min-width: 200px;
+  justify-content: space-between;
+}
+
+.settingsClose {
+  display: flex;
+  flex-direction: row;
+  color: white;
+}
+
+.settingsClose button {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 2px;
+}
+
+.settingsClose button:hover {
+  transform: scale(1.2);
+}
+
+.activeLang {
+  color: #c5b358;
+}
+
+.inactiveLang {
+  color: white;
+}
+
+.settingsClass {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: 0.4s;
+  position: relative;
+  left: -65px;
+}
+
+.settingsClose {
+  margin: 0 20px 0 0;
+}
+
+.settingOpen {
+}
+
+#settings {
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+#settings:hover {
+  transform: scale(1.2);
+}
+
+.footer img {
+  height: 32px;
+  width: auto;
+}
+
 .change-quote {
   margin-bottom: 30px;
   background-image: url("../assets/svg/reload.svg");
