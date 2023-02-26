@@ -18,6 +18,18 @@ document.addEventListener("DOMContentLoaded", function () {
     languageTime = "en-US";
   }
 
+  let cityInput = document.getElementById("savedCity");
+  let nameInput = document.getElementById("savedName");
+
+  if (language == "ua") {
+    ukraineLang.classList.toggle("activeLang");
+    ukraineLang.classList.toggle("inactiveLang");
+    englishLang.classList.toggle("inactiveLang");
+    englishLang.classList.toggle("activeLang");
+    cityInput.placeholder = 'Калуш';
+    nameInput.placeholder = "[Введіть ім'я]";
+  }
+
   function showTime() {
     let time = new Date();
     xdate.textContent = time.toLocaleDateString(`${languageTime}`, {
@@ -98,6 +110,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   englishLang.addEventListener("click", () => {
     showGreetingsEN();
+    cityInput.placeholder = 'Kalush';
+    nameInput.placeholder = "[Enter name]";
     ukraineLang.classList.toggle("activeLang");
     ukraineLang.classList.toggle("inactiveLang");
     englishLang.classList.toggle("inactiveLang");
@@ -115,6 +129,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   ukraineLang.addEventListener("click", () => {
     showGreetingsUA();
+    cityInput.placeholder = 'Калуш';
+    nameInput.placeholder = "[Введіть ім'я]";
     ukraineLang.classList.toggle("activeLang");
     ukraineLang.classList.toggle("inactiveLang");
     englishLang.classList.toggle("inactiveLang");
@@ -131,14 +147,9 @@ document.addEventListener("DOMContentLoaded", function () {
     getQuotes();
   });
 
-  if (language == "ua") {
-    ukraineLang.classList.toggle("activeLang");
-    ukraineLang.classList.toggle("inactiveLang");
-    englishLang.classList.toggle("inactiveLang");
-    englishLang.classList.toggle("activeLang");
-  }
 
-  let nameInput = document.getElementById("savedName");
+
+
   nameInput.addEventListener("input", function () {
     let name = nameInput.value;
     localStorage.setItem("name", name);
@@ -240,9 +251,10 @@ document.addEventListener("DOMContentLoaded", function () {
     savedCity = localStorage.getItem("city");
   }
 
-  let cityInput = document.getElementById("savedCity");
+  
   cityInput.addEventListener("input", function () {
     city = cityInput.value;
+ 
     localStorage.setItem("city", city);
     document.getElementById("savedCity").innerHTML = city;
   });
