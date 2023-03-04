@@ -1,7 +1,10 @@
-https://IhorSusoi.github.io/my_repo/
+[Curriculum Vitae - Ihor Susoi(html)](https://IhorSusoi.github.io/my_repo/)
 
-https://ihorsusoi.github.io/my_repo/plants/index.html
+[Curriculum Vitae - Ihor Susoi(md)](https://github.com/IhorSusoi/my_repo/blob/main/2023Q1/cv2023Q1.md)
 
-https://ihorsusoi.github.io/my_repo/book.html
+[Project 'Plants'(from RS School)](https://ihorsusoi.github.io/my_repo/plants/index.html)
 
-https://ihorsusoi.github.io/my_repo/momentum/index.html
+[Book for reading and easy translate](https://ihorsusoi.github.io/my_repo/book.html)
+
+[Momentum - inspirational photos and quote](https://ihorsusoi.github.io/my_repo/momentum/index.html)
+
