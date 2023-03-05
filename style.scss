@@ -19,7 +19,7 @@ h1, h2, h3 {
 
 h2 {
     font-family: $font-lato;
-    font-size: 18px;
+    font-size: 1.15rem;
     font-weight: bold;
     letter-spacing: 5px;
 }
@@ -33,7 +33,7 @@ a:hover {
     color: #2b2b2b;
 }
 
-@media screen and (width<798px) {
+@media all and (width<798px) {
     .round {
         display: none;
     }
@@ -62,7 +62,7 @@ body{
                 list-style: none;
                 height: 50px;
                 font-family: $font-lato;
-                font-size: 12px;
+                font-size: 0.75rem;
                 box-sizing: border-box;
                 padding: 15px;
             }
@@ -87,7 +87,7 @@ body{
                 background-color: #f4f4f4;
                 margin-bottom: 80px;
 
-                @media screen and (width<798px) {
+                @media all and (width<798px) {
                     flex-direction: column;
                     height: auto;
                     min-height: 170px;
@@ -95,7 +95,7 @@ body{
 
                 .name {
                     font-family: $font-raleway;
-                    font-size: 35px;
+                    font-size: 2.2rem;
                     letter-spacing: 20px;
                     font-weight: normal;
 
@@ -106,7 +106,7 @@ body{
 
                 .expertise {
                     font-family: $font-lato;
-                    font-size: 12px;
+                    font-size: 0.75rem;
                     letter-spacing: 20px;
                     font-weight: normal;
                 }
@@ -124,10 +124,10 @@ body{
                 display: flex;
                 flex-direction: row;
                 font-family: $font-lato;
-                font-size: 12px;
+                font-size: 0.75rem;
 
-                @media screen and (width<798px) {
-                    flex-direction: column;
+                @media all and (width<798px) {
+                    flex-direction: column-reverse;
                 }
 
                 .underline {
@@ -145,6 +145,10 @@ body{
                     
                     nav.contacts {
                         margin: 0 35px 0 0;
+
+                        img {
+                            margin: 0 7px 0 0;
+                        }
 
                         ul {
                             list-style: none;
@@ -198,8 +202,8 @@ body{
 
                     .round {
                         background-color: #fff;
-                        width: 10px;
-                        height: 10px;
+                        width: 0.65rem;
+                        height: 0.65rem;
                         border-radius: 50%;
                         border: solid #2b2b2b 1px;
                         transform: translate(7px, -5px);
@@ -214,6 +218,10 @@ body{
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
+
+                    @media all and (width<768px){
+                        border-left: none;
+                    }
 
                     .profile {
                         margin-left: 35px;
@@ -296,7 +304,7 @@ body{
             align-items: center;
         }
 
-        @media screen and (width<400px) {
+        @media all and (width<400px) {
             .container {
                 flex-direction: column;
             }
