@@ -33,6 +33,12 @@ a:hover {
     color: #2b2b2b;
 }
 
+@media screen and (width<798px) {
+    .round {
+        display: none;
+    }
+}
+
 body{
     height: 100%;
     display: flex;
@@ -42,7 +48,7 @@ body{
 
         .container{
             background-color: $main-color;
-            width: 798px;
+            max-width: 798px;
             height: 50px;
             margin: 0 auto;
         }
@@ -67,7 +73,7 @@ body{
         flex-grow: 1;
 
         .container {
-            width: 798px;
+            max-width: 798px;
             margin: 0 auto;
 
             .main-name-photo {
@@ -80,6 +86,12 @@ body{
                 padding: 40px;
                 background-color: #f4f4f4;
                 margin-bottom: 80px;
+
+                @media screen and (width<798px) {
+                    flex-direction: column;
+                    height: auto;
+                    min-height: 170px;
+                }
 
                 .name {
                     font-family: $font-raleway;
@@ -100,8 +112,8 @@ body{
                 }
 
                 img{
-                    width: 150px;
-                    height: 150px;
+                    width: 180px;
+                    height: auto;
                     clip-path: circle(50%);
                     position: relative;
                     top: 30px;
@@ -114,18 +126,25 @@ body{
                 font-family: $font-lato;
                 font-size: 12px;
 
+                @media screen and (width<798px) {
+                    flex-direction: column;
+                }
+
                 .underline {
                     height: 2px;
                     background-color: #464a4e;
+                    margin-top: 20px;
                 }
 
                 .left-side {
                     flex: 3;
                     padding-left: 50px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
                     
                     nav.contacts {
                         margin: 0 35px 0 0;
-                        height: 130px;
 
                         ul {
                             list-style: none;
@@ -147,8 +166,9 @@ body{
                         }
                     }
 
-                    .skills, .education {
+                    .skills, .education, .languages, .hobbies {
                         margin-top: 40px;
+                        margin-bottom: 20px;
 
                         ul {
                             margin-top: 35px;
@@ -159,16 +179,45 @@ body{
                             }
                         }
                     }
+
+                    .hobbies {
+
+                        .icons {
+                            margin-top: 20px;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            box-sizing: border-box;
+                            padding: 0 30px 0 0;
+
+                            img {
+                                height: 40px;
+                            }
+                        }
+                    }
+
+                    .round {
+                        background-color: #fff;
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        border: solid #2b2b2b 1px;
+                        transform: translate(7px, -5px);
+                        float: right;
+                    }
                 }
 
                 .right-side {
                     flex: 5;
                     padding-right: 50px;
                     border-left: solid #464a4e 2px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
 
                     .profile {
                         margin-left: 35px;
-                        height: 130px;
+                        min-height: 130px;
 
                         h2 {
                             margin-bottom: 20px;
@@ -179,6 +228,51 @@ body{
                         }
                     }
 
+                    .work-experience {
+                        margin-left: 35px;
+
+                        h2 {
+                            margin: 40px 0 40px 0;
+                        }
+                        
+                        p {
+                            line-height: 20px;
+                            margin-bottom: 10px;
+                            text-indent: 30px;
+                        }
+
+                        b:hover {
+                            color: #2b2b2b;
+                        }
+
+                        ul {
+                            list-style: none;
+                        }
+                    }
+
+                    .example-of-code {
+                        margin-left: 35px;
+
+                        h2 {
+                            margin: 40px 0 40px 0;
+                            text-transform: uppercase;
+                        }
+
+                        ul {
+                            li {
+                                line-height: 22px;
+                            }
+                        }
+                    }
+
+                    .round {
+                            background-color: #fff;
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            border: solid #2b2b2b 1px;
+                            transform: translate(-7px, -5px);
+                    }
                 };
 
                 img {
@@ -190,5 +284,44 @@ body{
     footer {
         height: 50px;
         margin-top: auto;
+        font-family: $font-lato;
+
+        .container {
+            max-width: 798px;
+            margin: 10px auto;
+            padding-bottom: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        @media screen and (width<400px) {
+            .container {
+                flex-direction: column;
+            }
+            div{
+                margin: 10px 0;
+            }
+        }
+
+        div {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+
+            a{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+            }
+        }
+
+        img {
+            height: 40px;
+            width: auto;
+        }
     }
 }

@@ -19,11 +19,11 @@
         <div class="container">
             <nav class="header-nav">
                 <ul class="header-nav-ul">
-                    <li>About me</li>
-                    <li>Contacts</li>
-                    <li>My projects</li>
-                    <li>Education</li>
-                    <li>Skills</li>
+                    <li><a href="#about">About me</a></li>
+                    <li><a href="#contacts">Contacts</a></li>
+                    <li><a href="#projects">My projects</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
                 </ul>
             </nav>
         </div>
@@ -39,7 +39,7 @@
             </div>
             <div class="main-cv">
                 <div class="left-side">
-                    <nav class="contacts">
+                    <nav class="contacts" id="contacts">
                         <ul>
                             <li><p><img src="./phone.png" alt="phone"> Discord:</p> Ihor Susoi (@IhorSusoi)</li>
                             <li><p><img src="./mail.png" alt="mail"> E-mail:</p><a href="mailto:ihor.susoi@gmail.com">ihor.susoi@gmail.com</a></li>
@@ -47,8 +47,10 @@
                             <li><p><img src="./geolocation.png" alt="geolocation"> Location:</p> Kalush, Ukraine</li>
                         </ul>
                     </nav>
-                    <div class="underline"></div>
-                    <div class="skills">
+                    <div class="underline">
+                        <div class="round"></div>
+                    </div>
+                    <div class="skills" id="skills">
                         <h2>SKILLS</h2>
                         <ul>
                             <li>Creating website layouts and structures</li>
@@ -59,30 +61,103 @@
                             <li>Managing version control and deploying websites</li>
                             <li>C++, Git, JavaScript, CSS, HTML, SASS</li>
                         </ul>
-                        <div class="underline"></div>
+                        <div class="underline">
+                            <div class="round"></div>
+                        </div>
                     </div>
-                    <div class="education">
+                    <div class="education" id="education">
                         <h2>EDUCATION</h2>
                             <ul>
-                                <li><a href="https://ihorsusoi.github.io/my_repo/My-Certificates/IhorSusoi-IT%20Essentials%20PC-certificate.pdf" target="_blank">Cisco: IT Essentials: PC Hardware and Software</a></li>
-                                <li><a href="https://ihorsusoi.github.io/my_repo/My-Certificates/IhorSusoi-Programming%20Esse-certificate%20.pdf" target="_blank">Cisco: Programming Essentials in C</a></li>
+                                <li><a href="https://ihorsusoi.github.io/my_repo/My-Certificates/IhorSusoi-IT%20Essentials%20PC-certificate.pdf" target="_blank" title="Open certificate">Cisco: IT Essentials: PC Hardware and Software</a></li>
+                                <li><a href="https://ihorsusoi.github.io/my_repo/My-Certificates/IhorSusoi-Programming%20Esse-certificate%20.pdf" target="_blank" title="Open certificate">Cisco: Programming Essentials in C</a></li>
                                 <li>ITStep: C++ base course</li>
-                                <li><a href="https://ihorsusoi.github.io/my_repo/My-Certificates/ihorsus_certificate_rsschool_pre-school.pdf" target="_blank">RSSchool: JS/FE Pre-School 2022Q4</a></li>
+                                <li><a href="https://ihorsusoi.github.io/my_repo/My-Certificates/ihorsus_certificate_rsschool_pre-school.pdf" target="_blank" title="Open certificate">RSSchool: JS/FE Pre-School 2022Q4</a></li>
                             </ul>
+                    </div>
+                    <div class="underline">
+                        <div class="round"></div>
+                    </div>
+                    <div class="languages">
+                        <h2>LANGUAGES</h2>
+                        <ul>
+                            <li><b>Ukrainian:</b> native</li>
+                            <li><b>English:</b><a href="https://learnenglish.britishcouncil.org/level-test-b1" target="_blank"> B1 English level (intermediate)</a></li>
+                        </ul>
+                    </div>
+                    <div class="underline">
+                        <div class="round"></div>
+                    </div>
+                    <div class="hobbies">
+                        <h2>HOBBIES</h2>
+                        <div class="icons">
+                            <img src="./cycling.png" alt="Cycling" title="Cycling">
+                            <img src="./canoe.png" alt="kayak" title="Kayaking">
+                            <img src="./hiking.png" alt="hiking" title="Hiking">
+                            <img src="./coding.png" alt="Coding" title="Coding">
+                        </div>
+                    </div>
+                    <div class="underline">
+                        <div class="round"></div>
                     </div>
                 </div>
                 <div class="right-side">
-                    <div class="profile">
+                    <div class="profile" id="about">
                         <h2>PROFILE</h2>
                         <p>Now i am a system administrator of internet networks, and I dream of becoming a Front-end developer. Self-motivated, quick learner, reliable, able to meet deadlines. Even though I take my work seriously, I do have a good sense of humour. I learn C++, Git, JavaScript, CSS, HTML, SASS</p>
                     </div>
-                    <div class="underline"></div>
+                    <div class="underline">
+                        <div class="round"></div>
+                    </div>
+                    <div class="work-experience" id="projects">
+                        <h2>WORK EXPERIENCE:</h2>
+                        <p>I do not have work experience with Front-end yet, but have some of my best projects:</p>
+                        <ul>
+                            <li>
+                                <a href="https://rolling-scopes-school.github.io/ihorsusoi-JSFEPRESCHOOL2022Q4/momentum/index.html" target="_blank"><b>Momentum</b></a> - Daily inspirational photo and quote;
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="underline">
+                        <div class="round"></div>
+                    </div>
+                    <div class="example-of-code">
+                        <h2>Examples of my code</h2>
+                        <ul>
+                        <li><b>My</b> profile on <a href="https://www.codewars.com/users/rsschool_2b264b47a74cd9c9" target="_blank">Codewars</a></li>
+                        <li><b>One</b> of my solutions: <a href="https://www.codewars.com/kata/522551eee9abb932420004a0" target="_blank">n-th Fibonacci</a>:
+                            <pre><code>
+function nthFibo(n) {
+    let a = 1;
+    let b = 1;
+    let c = a + b;
+    let j_it = 4;
+    if(n == 1) return 0;
+    if(n == 2 || n == 3) return 1;
+    for (let i = 4; i < n; i++ ){
+      a = b;
+      b = c;
+      c = a + b;
+      if(i == c) j_it++;
+    }
+    return c;
+}
+                            </code></pre>
+                        </li>
+                        </ul>
+                    </div>
+                    <div class="underline">
+                        <div class="round"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
-    <footer>
-
+    <footer class="footer">
+        <div class="container">
+                <div><a href="https://github.com/IhorSusoi" target="_blank" title="Ihor Susoi`s GitHub"><img src="./github.png" alt="github" title="GitHub Ihor Susoi">Ihor Susoi</a></div>
+                <div>&#169; 2023</div>
+                <div><a href="https://rs.school/js/" target="_blank" title="RS School JS stage1"><img src="./rsSchool.svg" alt="RS School" title="RS School JS stage1"></a></div>
+        </div>
     </footer>
 </body>
 </html>
