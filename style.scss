@@ -146,6 +146,16 @@ body{
                     nav.contacts {
                         margin: 0 35px 0 0;
 
+                        h2 {
+                            display: none;
+                            margin-bottom: 20px;
+                            margin-top: 40px;
+
+                            @media all and (width<798px) {
+                                display: block;
+                            }
+                        }
+
                         img {
                             margin: 0 7px 0 0;
                         }

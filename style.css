@@ -130,6 +130,16 @@ body main .container .main-cv .left-side {
 body main .container .main-cv .left-side nav.contacts {
   margin: 0 35px 0 0;
 }
+body main .container .main-cv .left-side nav.contacts h2 {
+  display: none;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+@media all and (width < 798px) {
+  body main .container .main-cv .left-side nav.contacts h2 {
+    display: block;
+  }
+}
 body main .container .main-cv .left-side nav.contacts img {
   margin: 0 7px 0 0;
 }
