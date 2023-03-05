@@ -1,0 +1,194 @@
+$main-color: #fff; 
+$font-lato: 'Lato', sans-serif;
+$font-raleway: 'Raleway', sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    color: #706f6f;
+}
+
+html{
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+h1, h2, h3 {
+    color: #464a4e;
+}
+
+h2 {
+    font-family: $font-lato;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+a {
+    color: #706f6f;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #2b2b2b;
+}
+
+body{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    header.header{
+
+        .container{
+            background-color: $main-color;
+            width: 798px;
+            height: 50px;
+            margin: 0 auto;
+        }
+
+        nav.header-nav {
+            ul.header-nav-ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                list-style: none;
+                height: 50px;
+                font-family: $font-lato;
+                font-size: 12px;
+                box-sizing: border-box;
+                padding: 15px;
+            }
+        }
+    }
+
+    main {
+        flex-grow: 1;
+
+        .container {
+            width: 798px;
+            margin: 0 auto;
+
+            .main-name-photo {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                height: 170px;
+                box-sizing: border-box;
+                padding: 40px;
+                background-color: #f4f4f4;
+                margin-bottom: 80px;
+
+                .name {
+                    font-family: $font-raleway;
+                    font-size: 35px;
+                    letter-spacing: 20px;
+                    font-weight: normal;
+
+                    b{
+                        color: #464a4e;
+                    }
+                }
+
+                .expertise {
+                    font-family: $font-lato;
+                    font-size: 12px;
+                    letter-spacing: 20px;
+                    font-weight: normal;
+                }
+
+                img{
+                    width: 150px;
+                    height: 150px;
+                    clip-path: circle(50%);
+                    position: relative;
+                    top: 30px;
+                }
+            }
+
+            .main-cv {
+                display: flex;
+                flex-direction: row;
+                font-family: $font-lato;
+                font-size: 12px;
+
+                .underline {
+                    height: 2px;
+                    background-color: #464a4e;
+                }
+
+                .left-side {
+                    flex: 3;
+                    padding-left: 50px;
+                    
+                    nav.contacts {
+                        margin: 0 35px 0 0;
+                        height: 130px;
+
+                        ul {
+                            list-style: none;
+                            box-sizing: border-box;
+                            margin-bottom: 25px;
+
+                            li {
+                                line-height: 22px;
+                                align-items: center;
+                                display: flex;
+                                justify-content: space-between;
+
+                                p {
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                }
+                            }
+                        }
+                    }
+
+                    .skills, .education {
+                        margin-top: 40px;
+
+                        ul {
+                            margin-top: 35px;
+
+                            li {
+                                line-height: 22px;
+                                align-items: center;
+                            }
+                        }
+                    }
+                }
+
+                .right-side {
+                    flex: 5;
+                    padding-right: 50px;
+                    border-left: solid #464a4e 2px;
+
+                    .profile {
+                        margin-left: 35px;
+                        height: 130px;
+
+                        h2 {
+                            margin-bottom: 20px;
+                        }
+                        
+                        p {
+                            line-height: 20px;
+                        }
+                    }
+
+                };
+
+                img {
+                    height: 15px;
+                }
+            }
+        }
+    }
+    footer {
+        height: 50px;
+        margin-top: auto;
+    }
+}

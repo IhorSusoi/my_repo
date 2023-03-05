@@ -1,181 +1,162 @@
-body {
-    display: flex;
-    flex-direction: row;
-    margin: auto;
-    width: 1000px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  color: #706f6f;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+h1, h2, h3 {
+  color: #464a4e;
+}
+
+h2 {
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 5px;
 }
 
 a {
-    text-decoration: none;
+  color: #706f6f;
+  text-decoration: none;
 }
 
-.right-block a {
-    color: #202126;
+a:hover {
+  color: #2b2b2b;
 }
 
-.left-side a {
-    color: #ffffff;
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+body header.header .container {
+  background-color: #fff;
+  width: 798px;
+  height: 50px;
+  margin: 0 auto;
+}
+body header.header nav.header-nav ul.header-nav-ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  height: 50px;
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  box-sizing: border-box;
+  padding: 15px;
+}
+body main {
+  flex-grow: 1;
+}
+body main .container {
+  width: 798px;
+  margin: 0 auto;
+}
+body main .container .main-name-photo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 170px;
+  box-sizing: border-box;
+  padding: 40px;
+  background-color: #f4f4f4;
+  margin-bottom: 80px;
+}
+body main .container .main-name-photo .name {
+  font-family: "Raleway", sans-serif;
+  font-size: 35px;
+  letter-spacing: 20px;
+  font-weight: normal;
+}
+body main .container .main-name-photo .name b {
+  color: #464a4e;
+}
+body main .container .main-name-photo .expertise {
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  letter-spacing: 20px;
+  font-weight: normal;
+}
+body main .container .main-name-photo img {
+  width: 150px;
+  height: 150px;
+  clip-path: circle(50%);
+  position: relative;
+  top: 30px;
+}
+body main .container .main-cv {
+  display: flex;
+  flex-direction: row;
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+}
+body main .container .main-cv .underline {
+  height: 2px;
+  background-color: #464a4e;
+}
+body main .container .main-cv .left-side {
+  flex: 3;
+  padding-left: 50px;
+}
+body main .container .main-cv .left-side nav.contacts {
+  margin: 0 35px 0 0;
+  height: 130px;
+}
+body main .container .main-cv .left-side nav.contacts ul {
+  list-style: none;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+}
+body main .container .main-cv .left-side nav.contacts ul li {
+  line-height: 22px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+body main .container .main-cv .left-side nav.contacts ul li p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body main .container .main-cv .left-side .skills, body main .container .main-cv .left-side .education {
+  margin-top: 40px;
+}
+body main .container .main-cv .left-side .skills ul, body main .container .main-cv .left-side .education ul {
+  margin-top: 35px;
+}
+body main .container .main-cv .left-side .skills ul li, body main .container .main-cv .left-side .education ul li {
+  line-height: 22px;
+  align-items: center;
+}
+body main .container .main-cv .right-side {
+  flex: 5;
+  padding-right: 50px;
+  border-left: solid #464a4e 2px;
+}
+body main .container .main-cv .right-side .profile {
+  margin-left: 35px;
+  height: 130px;
+}
+body main .container .main-cv .right-side .profile h2 {
+  margin-bottom: 20px;
+}
+body main .container .main-cv .right-side .profile p {
+  line-height: 20px;
+}
+body main .container .main-cv img {
+  height: 15px;
+}
+body footer {
+  height: 50px;
+  margin-top: auto;
 }
 
-pre code {
-    background-color: #eee;
-    border: 1px solid #999;
-    display: block;
-    padding: 20px;
-    margin-left: 10%;
-    min-width: fit-content;
-  }
-
-@media screen and (max-width: 1017px) {
-    body {
-        display: flex;
-        flex-direction: column-reverse;
-        margin: auto;
-        width: 340px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-    }
-
-    .rsschool-logo {
-        width: 100%;
-        position: sticky;
-        bottom: 0;
-        margin: 20px 0;
-    }
-
-    .left-side {
-        background-color: #202126;
-        flex: 2;
-        display: flex;
-        flex-direction: column;
-        margin: auto;
-    }
-  }
-
-  @media screen and (max-width: 500px) {
-    body {
-        display: flex;
-        flex-direction: column-reverse;
-        margin: auto;
-        min-width: 340px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-    }
-    .rsschool-logo {
-        width: 100%;
-        position: sticky;
-        bottom: 0;
-        margin: 20px 0;
-    }
-  }
-
-.left-side {
-    background-color: #212026;
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    color: #ffffff;
-}
-
-.left-side .avatar {
-    width: 100%;
-} 
-
-.left-side .education {
-    margin-left: 10%;
-}
-
-.left-side .education h1 {
-    text-transform: uppercase;
-}
-
-.left-side .underscore {
-    background-color: #ffd401;
-    height: 2px;
-}
-
-.left-side .education .university {
-    margin-left: 10%;
-    font-size: 1.1em;
-    text-transform: capitalize;
-}
-
-.left-side .education .specialization {
-    margin-left: 12%;
-    font-size: 1em;
-    text-transform: capitalize;
-}
-
-.rsschool-logo {
-    margin:230px 0 0 0;
-    padding: 0;
-}
-
-.rsschool-logo img{
-    width: 100%;
-}
-
-.contacts {
-    display: flex;
-    flex-direction: row;
-}
-
-.contacts .yellow_box {
-    flex: 2;
-    background-color: #ffd401;
-}
-
-.contacts .contact_name {
-    flex: 10;
-    background-color: #292a2f;
-    color: white;
-}
-
-.contacts .contact_name p {
-    margin: 2px 20px;
-}
-
-.contact {
-    margin: 2px 20%;
-}
-
-
-
-.right-side {
-    background-color: #ffffff;
-    flex: 4;
-    color: #2d2d2d;
-}
-
-header {
-    margin: 10% 0;
-    background-color: #ffd401;
-}
-
-header .p1 {
-    text-transform: uppercase;
-    font-size: 3em;
-    padding: 10% 20% 0;
-    margin-bottom: 0;
-}
-
-header .p2 {
-    text-transform: uppercase;
-    font-size: 1.5em;
-    padding: 0 20% 5%;
-    margin-top: 0;
-}
-
-.right-side .right-block h1 {
-    margin-left: 10%;
-    text-transform: uppercase;
-}
-
-.right-side .right-block .underscore {
-    height: 2px;
-    background-color: #2d2d2d;
-    margin-left: 10%;
-}
-
-.right-side .right-block p {
-    margin: 3% 8% 3% 15%;
-}
+/*# sourceMappingURL=style.css.map */
