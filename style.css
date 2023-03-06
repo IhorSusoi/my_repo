@@ -308,6 +308,9 @@ body footer img {
   body main .container .main-cv .right-side {
     border-left: none;
   }
+}
+
+@media all and (width < 400px) {
   body footer .container {
     flex-direction: column;
   }
