@@ -265,7 +265,7 @@ body footer .container {
   justify-content: space-around;
   align-items: center;
 }
-@media all and (max-device-width: 400px) {
+@media all and (max-width: 400px) {
   body footer .container {
     flex-direction: column;
   }
