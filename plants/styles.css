@@ -239,8 +239,10 @@ header .navbar {
     transition: 500ms;
 }
 
-
-.service .services_content .services_btns .btn:hover {
+.service .services_content .services_btns .btn:hover,
+.service .services_content .services_btns .btn.gardens:hover,
+.service .services_content .services_btns .btn.plants:hover,
+.service .services_content .services_btns .btn.lawn:hover {
     color: #EDF2EC;
     background-color: #E06733;
 }
@@ -259,10 +261,26 @@ header .navbar {
     display: grid;
     width: 330px;
     height: 450px;
+    filter: blur(0px);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.service .services .service_item.planting{
+    filter: blur(0px);
+}
+
+.service .services .service_item.lawnCare{
+    filter: blur(0px);
+}
+
+.service .services .service_item.gardenCare{
+    filter: blur(0px);
 }
 
 .service .services .service_item img {
     border-radius: 20px 20px 0px 0px;
+    
 }
 
 .service .services .service_item img.img768{
@@ -279,9 +297,6 @@ header .navbar {
 
 .service .services .service_item .rectangle h2 {
     margin: 10px 0 0 0;
-}
-
-.service .services .service_item .rectangle h2 a {
     display: flex;
     height: 24px;
     font-family: 'Inter', sans-serif;
@@ -358,16 +373,30 @@ header .navbar {
     border-radius: 20px;
     flex-direction: column;
     justify-content: space-between;
+    transition: 0.5s;
 }
 
-.prices .prices_wrapper .prices_bar .prices_items .prices_item {
+.underscore {
+    height: 0px;
+    width: 164px;
+    border: 0.5px solid #AEA1A1;
+    border-radius: 25%;
+    display: block;
+    margin-top: 12px;
+}
+
+.prices .prices_wrapper .prices_bar .prices_items .prices_item,
+.prices .prices_wrapper .prices_bar .prices_items .prices_item.basics,
+.prices .prices_wrapper .prices_bar .prices_items .prices_item.standard,
+.prices .prices_wrapper .prices_bar .prices_items .prices_item.procare {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: left;
     box-sizing: border-box;
     padding: 16px 40px;
     width: 250px;
     height: 50px;
-    background: #EDF2EC;
+    background-color: #EDF2EC;
     border-radius: 20px;
     font-family: 'Inter', sans-serif;
     font-style: normal;
@@ -375,7 +404,76 @@ header .navbar {
     font-size: 20px;
     line-height: 20px;
     color: #000000;
-    align-items: center;
+    position: relative;
+    transition: 0.5s;
+}
+
+.prices .prices_wrapper .prices_bar .prices_items .prices_item .open {
+    display: none;
+    flex-direction: column;
+    height: 108px;
+}
+
+.prices .prices_wrapper .prices_bar .prices_items .prices_item .open .text {
+    width: 169px;
+    height: 30px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 10px;
+    margin: 6px 0 0 0;
+    color: #717171;
+}
+
+.prices .prices_wrapper .prices_bar .prices_items .prices_item .open .price {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    margin: 6px 0 0 0;
+    width: 123px;
+    height: 17px;
+}
+
+.prices .prices_wrapper .prices_bar .prices_items .prices_item .open .dollar {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 20px;
+    color: #E06733;
+}
+
+.prices .prices_wrapper .prices_bar .prices_items .prices_item .open .summa {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #E06733;
+}
+
+.prices .prices_wrapper .prices_bar .prices_items .prices_item .open .order {
+    background: #FFFFFF;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 12px;
+    width: 86px;
+    height: 25px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: #717171;
+}
+
+.prices .prices_wrapper .prices_bar .prices_items .prices_item .open a {
+    width: 86px;
+    height: 25px;
 }
 
 .prices .prices_wrapper .prices_bar .prices_items .prices_item .accordeon_btn{
@@ -385,8 +483,11 @@ header .navbar {
     background: #D9D9D9;
     align-items: center;
     justify-content: center;
-    position: relative;
+    position: absolute;
+    right: 40px;
+    top: 20px;
     display: flex;
+    cursor: pointer;
 }
 
 .prices .prices_wrapper .text_call_us {
@@ -439,6 +540,7 @@ header .navbar {
     height: 550px;
     margin: auto;
     display: flex;
+    transition: 0.5s;
 }
 
 .contacts h2 {
@@ -455,14 +557,16 @@ header .navbar {
 
 .contacts .city {
     margin: 148px 0 0 0;
+    margin-bottom: 0;
     width: 450px;
     height: 50px;
     background-color: #D6E7D2;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box;
-    padding: 5px 35px 5px 20px;
+    padding: 5px 35px 5px 0;
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -470,18 +574,176 @@ header .navbar {
     line-height: 40px;
     letter-spacing: 0.05em;
     color: #717171;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#cityFist {
+    padding-left: 20px;
+    z-index: 2;
+}
+
+#cityChoose.active {
+    background: #C1E698;
+    border: 1px solid #D6E7D2;
+    border-radius: 0px;
+}
+
+#Sherill:hover, #Yonkers:hover,
+#Canandaigua:hover, #NewYork:hover {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 40px;
+    letter-spacing: 0.05em;
+    color: #717171;
+    border-bottom: 1px solid #717171;
+}
+
+.contacts .city #cityFist {
+    display: flex;
+    justify-content: space-between;
+    transition: 0.5s;
+}
+
+.contacts .city .choosingCities {
+    width: 450px;
+    height: 0;
+    background: #DCE9D9;
+    flex-direction: column;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 40px;
+    letter-spacing: 0.05em;
+    color: #499A18;
+    transition: 0.5s;
+    display: flex;
+    z-index: 2;
+}
+
+#choosingCities.active {
+    height: 234px;
+    padding: 27px 50px 31px 20px;
+    transition: 0.5s;
+}
+
+.NewYork, .Canandaigua, .Yonkers, .Sherill {
+    display: none;
+    z-index: 2;
+}
+
+#NewYork.active, #Canandaigua.active, #Yonkers.active, #Sherill.active {
+    display: flex;
+}
+
+.contacts .city .choosingCities div {
+    border-bottom: 1px solid #D9D9D9; 
+    cursor: pointer;
+    transition: 0.5s;
 }
 
 .contacts .city .accordeon_btn {
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    background: #D9D9D9;
     align-items: center;
     justify-content: center;
     position: relative;
     display: flex;
     margin-top: 12px;
+    transition: 0.5s;
+}
+
+.cityCard {
+    width: 448px;
+    height: 214px;
+    margin: 47px 0 0 0;
+    padding: 17px 0 32px 0;
+    background: #EDF2EC;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    box-sizing: border-box;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: 1;
+    display: none;
+}
+
+.cityCard.active {
+    display: flex;
+}
+
+.cityCard a {
+    width: 122px;
+    height: 26px;
+    font-family: 'Inika', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 13px;
+    text-align: center;    
+    color: #717171;
+    border: 1px solid #E06733;
+    border-radius: 5px;
+    padding: 7px;
+    box-sizing: border-box;
+    margin: 10px 0 0 0;
+}
+
+.cityCard p {
+    margin: 0;
+}
+
+.phones {
+    height: 115px;
+    width: 130px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 40px;
+    letter-spacing: 0.05em;
+    color: #000000;
+    margin: 0 0 0 33px;
+}
+
+.phones2 {
+    width: 207px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 40px;
+    letter-spacing: 0.05em;
+    color: #717171;
+    margin: 0 76px 0 0;
+}
+
+
+.accordeon_btnIMG_active {
+    display: none;
+    transition: 0.5s;
+}
+
+#accordeon_btnIMG_active.active {
+    display: block;
+    transition: 0.5s;
+}
+
+.accordeon_btnIMG_unactive {
+    display: block;
+    transition: 0.5s;
+}
+
+#accordeon_btnIMG_unactive.active {
+    display: none;
+    transition: 0.5s;
 }
 
 .contacts img.woman {
@@ -1044,7 +1306,7 @@ footer .social_list {
 
     .prices .prices_wrapper .prices_bar {
         width: 100%;
-        height: 302px;
+        height: auto;
         align-items: center;
         display: flex;
         flex-direction: column;
@@ -1065,12 +1327,28 @@ footer .social_list {
         padding: 29px 22px;
     }
 
-    .prices .prices_wrapper .prices_bar .prices_items .prices_item {
+    .prices .prices_wrapper .prices_bar .prices_items .prices_item,
+    .prices .prices_wrapper .prices_bar .prices_items .prices_item.basics,
+    .prices .prices_wrapper .prices_bar .prices_items .prices_item.standard,
+    .prices .prices_wrapper .prices_bar .prices_items .prices_item.procare {
         width: 180px;
         height: 50px;
         padding: 15px 40px 15px 30px;
         font-size: 15px;
         line-height: 20px;
+    }
+
+    .underscore {
+        width: 94px;
+    }
+
+    .prices .prices_wrapper .prices_bar .prices_items .prices_item .open {
+        height: auto;
+    }
+
+    .prices .prices_wrapper .prices_bar .prices_items .prices_item .open .text {
+        width: 99px;
+        height: auto;
     }
 
     .prices .prices_wrapper {
@@ -1140,7 +1418,45 @@ footer .social_list {
         margin: 80px 0 0 0;
         width: 300px;
         height: 50px;
-        padding: 5px 20px;
+        padding: 5px 20px 5px 0;
+    }
+
+    .contacts .city .choosingCities {
+        width: 300px;
+    }
+
+    #choosingCities.active {
+        width: 300px;
+    }
+
+    .cityCard {
+        width: 282px;
+        height: 212px;
+        padding: 23px 0 36px 0;
+        margin: 49px 0 33px 0;
+    }
+
+    .phones{
+        line-height: 40px;
+        width: 64px;
+        margin: 0;
+    }
+
+    .phones2 {
+        line-height: 40px;
+        width: 144px;
+        margin: 0 0 0 5px;
+    }
+
+    #contactsDiv {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #officeAddress{
+        line-height: 20px;
     }
 
     .contacts .city .accordeon_btn {
