@@ -290,33 +290,4 @@ body footer img {
   width: auto;
 }
 
-@media all and (width < 798px) {
-  .round {
-    display: none;
-  }
-  body main .container .main-name-photo {
-    flex-direction: column;
-    height: auto;
-    min-height: 170px;
-  }
-  body main .container .main-cv {
-    flex-direction: column-reverse;
-  }
-  body main .container .main-cv .left-side nav.contacts h2 {
-    display: block;
-  }
-  body main .container .main-cv .right-side {
-    border-left: none;
-  }
-}
-
-@media all and (width < 400px) {
-  body footer .container {
-    flex-direction: column;
-  }
-  body footer div {
-    margin: 10px 0;
-  }
-}
-
 /*# sourceMappingURL=style.css.map */
