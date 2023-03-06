@@ -17,7 +17,7 @@
     <script src="index.js"></script>
     <title>Plants</title>
 </head>
-<body>
+<body id="body" onclick="navbar()">
     <header>
         <div class="header1440px">
         <div class="navbar">
@@ -25,13 +25,15 @@
                 <a href="index.html" title="Plants"><img src="logo1.svg" alt="leaf">
                 <img src="logo2.svg" alt="leaf" style="margin-left: -15px;">Plants</a>
             </div>
-            <nav>
+            
+            <img id="burgerMenu" src="burger.svg" alt="burger_menu" onclick="clickOnBurgerFoo()">
+            <nav id="nav-menu">
                 <ul>
-                    <li><a href="index.html" title="Plants" style="color: #E06733; font-weight: 700;">Home</a></li>
-                    <li><a href="#about" title="About">About us</a></li>
-                    <li><a href="#service" title="Service">Service</a></li>
-                    <li><a href="#price" title="Price">Price</a></li>
-                    <li><a href="#contacts" title="Contacts">Contacts</a></li>
+                    <li onclick="navbar()"><a href="index.html" title="Plants" style="color: #E06733; font-weight: 700;">Home</a></li>
+                    <li onclick="navbar()"><a href="#about" title="About">About us</a></li>
+                    <li onclick="navbar()"><a href="#service" title="Service">Service</a></li>
+                    <li onclick="navbar()"><a href="#price" title="Price">Price</a></li>
+                    <li onclick="navbar()"><a href="#contacts" title="Contacts">Contacts</a></li>
                 </ul>
             </nav>
         </div>
@@ -41,11 +43,7 @@
         <div style="background-color: #EDF2EC;">
         <section class="welcome">
             <div class="leafs">
-                <img src="leaf2.png" alt="leaf" style="transform: matrix(0.99, -0.12, 0.13, 0.99, 0, 0); top: 0; left: 20px; position: absolute;">
-                <img src="leaf1.png" alt="leaf" style="transform: matrix(-0.81, -0.56, 0.61, -0.81, 0, 0); top: 111px; left: 258px; position: absolute;">
-                <img src="leaf4.png" alt="leaf" style="transform: matrix(-0.63, 0.75, -0.81, -0.62, 0, 0); top: 200px; left: 0; position: absolute;">
-                <img src="leaf3.png" alt="leaf" style="transform: matrix(0.51, -0.84, 0.89, 0.49, 0, 0); top: 232px; left: 102px; position: absolute;">
-                <img src="leaf5.png" alt="leaf" style="transform: matrix(-0.96, -0.26, 0.29, -0.96, 0, 0); top: 253px; left: 310px; position: absolute;">
+                <img src="leafs.png" alt="leafs">
             </div>
             <div class="welcome_text">
                 <h1>We grow <span style="color: #499A18;">plants</span> and give you oxygen</h1>
@@ -75,42 +73,48 @@
             </div>
             <div class="services">
                 <div class="service_item">
-                    <img src="first.png" alt="woman and fruit">
+                    <img  class="img1440" src="first.png" alt="woman and fruit">
+                    <img class="img768" src="first768.png" alt="woman and fruit">
                     <div class="rectangle">
                         <h2><a href="index.html">Garden care</a></h2>
                         <p>Lorem Ipsum has been the industry</p>
                     </div>
                 </div>
                 <div class="service_item">
-                    <img src="second.png" alt="lemon in hand">
+                    <img class="img1440" src="second.png" alt="lemon in hand">
+                    <img class="img768" src="second768.png" alt="lemon in hand">
                     <div class="rectangle">
                         <h2><a href="index.html">Planting</a></h2>
                         <p>Lorem Ipsum has been the industry</p>
                     </div>
                 </div>
                 <div class="service_item">
-                    <img src="third.png" alt="spray water">
+                    <img class="img1440" src="third.png" alt="spray water">
+                    <img class="img768" src="third768.png" alt="spray water">
                     <div class="rectangle">
                         <h2><a href="index.html">Lawn care</a></h2>
                         <p>Lorem Ipsum has been the industry</p>
                     </div>
                 </div>
                 <div class="service_item">
-                    <img src="fourth.png" alt="woman and flowers">
+                    <img class="img1440" src="fourth.png" alt="woman and flowers">
+                    <img class="img768" src="fourth768.png" alt="woman and flowers">
                     <div class="rectangle">
                         <h2><a href="index.html">Planting</a></h2>
                         <p>Lorem Ipsum has been the industry</p>
                     </div>
                 </div>
                 <div class="service_item">
-                    <img src="fifth.png" alt="flowers">
+                    <img class="img1440" src="fifth.png" alt="flowers">
+                    <img class="img768" src="fifth768.png" alt="flowers">
                     <div class="rectangle">
                         <h2><a href="index.html">Garden care</a></h2>
                         <p>Lorem Ipsum has been the industry</p>
                     </div>
                 </div>
                 <div class="service_item">
-                    <img src="sixth.png" alt="cactus">
+                    <img class="img1440" src="sixth.png" alt="cactus">
+                    <img class="img768" src="sixth768.png" alt="cactus">
                     <div class="rectangle">
                         <h2><a href="index.html">Planting</a></h2>
                         <p>Lorem Ipsum has been the industry</p>
@@ -128,23 +132,18 @@
                         <div class="prices_item">
                             Basics
                             <div class="accordeon_btn">
-                                <img src="arrow1.svg" alt="arrow" style="transform: matrix(0, -1, 1, 0, 1, 0);">
-                                <img src="arrow1.svg" alt="arrow" style="transform: matrix(0, -1, -1, 0, -1, 0);">
+                                <img src="accordion_btn.svg" alt="arrow">
                             </div>
                         </div>
                         <div class="prices_item">
                             Standard
                             <div class="accordeon_btn">
-                                <img src="arrow1.svg" alt="arrow" style="transform: matrix(0, -1, 1, 0, 1, 0);">
-                                <img src="arrow1.svg" alt="arrow" style="transform: matrix(0, -1, -1, 0, -1, 0);">
-                            </div>
+                                <img src="accordion_btn.svg" alt="arrow">                            </div>
                         </div>
                         <div class="prices_item">
                             Pro care
                             <div class="accordeon_btn">
-                                <img src="arrow1.svg" alt="arrow" style="transform: matrix(0, -1, 1, 0, 1, 0);">
-                                <img src="arrow1.svg" alt="arrow" style="transform: matrix(0, -1, -1, 0, -1, 0);">
-                            </div>
+                                <img src="accordion_btn.svg" alt="arrow">                            </div>
                         </div>
                     </div>
                 </div>
@@ -153,23 +152,19 @@
                     <form action="index.html"><button class="btn">Contact us</button></form>
                 </div>
                 <div class="leafs">
-                    <img src="prices_leaf1.png" alt="leaf" style="transform: matrix(-0.81, -0.61, 0.56, -0.81, 0, 0); top: 49px; right: 0; position: absolute;">
-                    <img src="prices_leaf2.png" alt="leaf" style="transform: matrix(0.99, -0.13, 0.12, 0.99, 0, 0); top: 0; left: 0; position: absolute;">
-                    <img src="prices_leaf3.png" alt="leaf" style="transform: matrix(0.49, -0.89, 0.85, 0.51, 0, 0); bottom: 0; right: 20px; position: absolute;">
-                    <img src="prices_leaf4.png" alt="leaf" style="transform: matrix(-0.62, 0.8, -0.76, -0.63, 0, 0); top: 87px; left: 9px; position: absolute;">
+                    <img src="prices_leafs.png" alt="leaf">
                 </div>
             </div>
         </section>
         </div>
         <div style="background-color: #EDF2EC;">
             <section id="contacts" class="contacts">
-                <img src="contact_woman.png" alt="woman" style="margin-top: 53px;">
+                <img class="woman" src="contact_woman.png" alt="woman">
                 <h2>Contact us</h2>
                 <div class="city">
                     City
                     <div class="accordeon_btn">
-                        <img src="arrow1.svg" alt="arrow" style="transform: matrix(0, -1, 1, 0, 1, 0);">
-                        <img src="arrow1.svg" alt="arrow" style="transform: matrix(0, -1, -1, 0, -1, 0);">
+                        <img src="accordion_btn.svg" alt="arrow">
                     </div>
                 </div>
             </section>
@@ -179,12 +174,12 @@
         <div class="footer_data">
             <span>©</span><span>2022</span><span><a href="https://github.com/IhorSusoi" title="go to github">github</a></span>
         </div>
-        <a href="https://rs.school/" title="go to Rolling Scopes School">Rolling Scopes School</a>
+        <a href="https://rs.school/js-stage0/" title="go to Rolling Scopes School">Rolling Scopes School</a>
         <div class="social_list">
-            <a href="index.html"><img src="inst.svg" alt="Instagram"></a>
-            <a href="index.html"><img src="fb.svg" alt="Instagram"></a>
-            <a href="index.html"><img src="tw.svg" alt="Instagram"></a>
-            <a href="index.html"><img src="pinterest.svg" alt="Instagram"></a>
+            <a href="https://instagram.com"><img src="inst.svg" alt="Instagram"></a>
+            <a href="https://facebook.com"><img src="fb.svg" alt="Facebook"></a>
+            <a href="https://twitter.com"><img src="tw.svg" alt="Twitter"></a>
+            <a href="https://pinterest.com"><img src="pinterest.svg" alt="Pinterest"></a>
         </div>
     </footer>
 </body>
