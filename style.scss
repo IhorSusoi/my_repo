@@ -33,7 +33,7 @@ a:hover {
     color: #2b2b2b;
 }
 
-@media all and (width<798px) {
+@media all and (max-width: 798px) {
     .round {
         display: none;
     }
@@ -87,7 +87,7 @@ body{
                 background-color: #f4f4f4;
                 margin-bottom: 80px;
 
-                @media all and (width<798px) {
+                @media all and (max-width: 798px) {
                     flex-direction: column;
                     height: auto;
                     min-height: 170px;
@@ -126,7 +126,7 @@ body{
                 font-family: $font-lato;
                 font-size: 0.75rem;
 
-                @media all and (width<798px) {
+                @media all and (max-width: 798px) {
                     flex-direction: column-reverse;
                 }
 
@@ -151,7 +151,7 @@ body{
                             margin-bottom: 20px;
                             margin-top: 40px;
 
-                            @media all and (width<798px) {
+                            @media all and (max-width: 798px) {
                                 display: block;
                             }
                         }
@@ -229,7 +229,7 @@ body{
                     flex-direction: column;
                     justify-content: space-between;
 
-                    @media all and (width<768px){
+                    @media all and (max-width: 798px){
                         border-left: none;
                     }
 
@@ -314,7 +314,7 @@ body{
             align-items: center;
         }
 
-        @media all and (width<400px) {
+        @media all and (max-device-width: 400px) {
             .container {
                 flex-direction: column;
             }
