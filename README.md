@@ -8,4 +8,4 @@
 
 [Momentum - inspirational photos and quote](https://ihorsusoi.github.io/my_repo/momentum/index.html)
 
-[Memes in bayan for rsschool (only HTML and CSS, without JS](https://IhorSusoi.github.io/my_repo/cssBayan/index.html)
+[Memes in bayan for rsschool (only HTML and CSS, without JS)](https://IhorSusoi.github.io/my_repo/cssBayan/index.html)
