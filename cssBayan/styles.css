@@ -147,7 +147,7 @@ body footer.footer img {
   width: auto;
 }
 
-@media screen and (min-width:821px) {
+@media screen and (hover:hover) {
     main.main .container input:hover + label.label img.meme{
         max-height: 60rem;
         margin: auto;
